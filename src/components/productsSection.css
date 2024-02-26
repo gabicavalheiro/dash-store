@@ -1,0 +1,83 @@
+:root {
+    --azul-escuro: #040F41;
+    --azul-claro: #646A87;
+    --bg-cinza-card: #F5F5F5;
+    --bg-cinza: #EFEDED;
+}
+
+
+.section{
+    background: white;
+    height: 100%;
+    padding-bottom: 5%;
+}
+
+.titulo{
+    font-family: Gotham-black;
+    color: var(--azul-escuro) ;
+    font-size: 30px;
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    gap: 50px;
+
+}
+
+.card{
+    width: 450px;
+    height: 300px;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--bg-cinza-card);
+    margin-top: -5%;
+}
+
+
+h1{
+    font-family: Gotham;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 10%;
+    font-size: 25px;
+}
+
+.imagem{
+    display: flex;
+    justify-content: end;
+    margin-right: 10%;
+    margin-top: 7%;
+}
+
+.seta{
+    display: flex;
+    align-items: flex-end;
+    margin-left: 10%;
+    margin-top: -7%;
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.btn button{
+    padding: 20px 40px;
+    background-color: #040F41;
+    color: white;
+    border: none;
+    border-radius: 15px
+}

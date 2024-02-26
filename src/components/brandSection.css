@@ -1,0 +1,28 @@
+:root {
+    --azul-escuro: #040F41;
+    --azul-claro: #646A87;
+    --bg-cinza-card: #F5F5F5;
+    --bg-cinza: #EFEDED;
+}
+
+.brandSection{
+    height: 100%;
+    background-color: white;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+}
+
+.ca{
+    width: 250px;
+    height: 150px;
+    border-radius: 15px;
+    background: var(--bg-cinza-card);
+}

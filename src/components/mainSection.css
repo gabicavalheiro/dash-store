@@ -1,0 +1,70 @@
+
+
+.teste {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 10%;
+    height: 100%;
+    background: #EFEDED;
+    border-radius:  0 0 90px 90px;
+
+}
+
+.img, .body {
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+
+
+.body{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
+.camiseta{
+ width: 500px;
+ height: 800px;
+
+}
+.titleee{
+    color: var(--azul-escuro);
+    
+}
+.titleee .h2{
+    font-family: Gotham-black;
+    font-size: 150%;
+    
+}
+.titleee h2{
+    font-family: Gotham;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.titleee p{
+    font-family: Gotham;
+    font-weight: bold;
+}
+.st{
+    font-family: Gotham;
+    font-weight: bold;
+    
+}
+
+.titleee .btn{
+    background-color: #040F41;
+    color: white;
+    padding: 20px 60px;
+    display: inline-block; /* Alterado de flex para inline-block */
+    margin-top: 30px;
+}
+
+.titleee .b{
+    display: flex;
+    justify-content: center;
+}
+

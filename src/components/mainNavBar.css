@@ -1,0 +1,66 @@
+:root {
+    --azul-escuro: #040F41;
+    --azul-claro: #646A87;
+    --bg-cinza-card: #F5F5F5;
+    --bg-cinza: #EFEDED;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('/Gotham-font-family/Gotham/Gotham-Light.otf') format('truetype'); /* Substitua o caminho pelo caminho real do arquivo de fonte */
+  }
+@font-face {
+    font-family: 'Gotham-black';
+    src: url('/Gotham-font-family/Gotham/Gotham-Black.otf') format('truetype'); /* Substitua o caminho pelo caminho real do arquivo de fonte */
+  }
+
+.section {
+    background-color: var(--bg-cinza);
+    font-family:  'Gotham', sans-serif;
+    
+   
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+    background-color: var(--bg-cinza) ;
+   
+}
+
+.logo{
+    cursor: pointer;
+}
+
+
+
+.nav{
+    width: auto;
+    height: 60px;
+    background-color: var(--azul-escuro);
+    border-radius: 50px;
+    align-items: center;
+}
+
+.container{
+    margin: 0px 40px;
+   display: flex;
+   gap: 70px;
+   
+}
+
+.container a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container a:hover{
+    font-weight: bolder;
+}
+
+.icons{
+    color: #040F41;
+}
+

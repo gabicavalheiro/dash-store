@@ -1,0 +1,34 @@
+:root {
+    --azul-escuro: #040F41;
+    --azul-claro: #646A87;
+    --bg-cinza-card: #F5F5F5;
+    --bg-cinza: #EFEDED;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('/Gotham-font-family/Gotham/Gotham-Light.otf') format('truetype'); /* Substitua o caminho pelo caminho real do arquivo de fonte */
+  }
+@font-face {
+    font-family: 'Gotham-black';
+    src: url('/Gotham-font-family/Gotham/Gotham-Black.otf') format('truetype'); /* Substitua o caminho pelo caminho real do arquivo de fonte */
+  }
+
+
+.footer{
+    background-color: #040F41;
+    height: auto;
+}
+
+.content{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10%;
+}
+
+.titlee{
+    font-family: Gotham-black;
+    font-size: 120% ;
+}
