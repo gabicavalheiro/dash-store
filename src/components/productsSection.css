@@ -43,18 +43,19 @@
 
 h1{
     font-family: Gotham;
-    font-weight: bold;
+    font-weight: 900;
     position: absolute;
     margin-top: 10%;
     margin-left: 10%;
-    font-size: 25px;
+    font-size: 130%;
+    text-transform: uppercase;
 }
 
 .imagem{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-right: 10%;
-    margin-top: 7%;
+    margin-top: 12%;
 }
 
 .seta{

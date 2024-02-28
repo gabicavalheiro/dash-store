@@ -2,16 +2,43 @@ import './aboutSection.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import client from '../sanity.mjs';
+
+
+
+async function fetchData() {
+    try {
+        const query = `*[_type == "about"][0]`;
+        const Data = await client.fetch(query);
+        console.log('Dados do:',Data); // Log dos dados do cabeçalho
+        return Data;
+    } catch (error) {
+        console.error('Erro ao buscar dados no Sanity:', error);
+        return null;
+    }
+}
+
 export default function AboutSection() {
+
+    const [Data, setData] = useState(null);
+
+    useEffect(() => {
+        fetchData().then(Data => {
+            setData(Data);
+        });
+    }, []);
+
     return (
+        (Data &&
         <div className='about'>
             <div className="titulo">
                 SOBRE NÓS           
             </div>
             <div className="texto">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut magna libero, pharetra ultricies dui ut, sodales egestas tellus. Nulla vitae purus et odio elementum pharetra. Suspendisse sit amet dui vehicula, ultrices nulla sed, viverra urna. Duis cursus ex arcu, nec semper urna dapibus vehicula. Quisque ex felis, mollis eu neque et, mollis aliquam sapien. Phasellus ac dui nisi. Morbi condimentum ipsum enim, eu luctus arcu tincidunt quis. Sed posuere, elit eget pharetra accumsan, tellus sem rhoncus massa, id auctor felis orci vitae leo. Donec ut commodo neque.
+                {Data.texto}
             </div>
         </div>
+        )
     )
 }

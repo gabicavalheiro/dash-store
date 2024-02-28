@@ -1,29 +1,55 @@
 import './mainSection.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import { useEffect, useState } from 'react';
 
 import React from 'react';
+import client from '../sanity.mjs';
+import useSanityImage from '../hooks/useSanityImage';
 
-export default function MainSection(){
-    return(
-        <div className="teste">
+async function fetchHeaderData() {
+    try {
+        const query = `*[_type == "header"][0]`;
+        const headerData = await client.fetch(query);
+        console.log('Dados do Header:', headerData); // Log dos dados do cabeçalho
+        return headerData;
+    } catch (error) {
+        console.error('Erro ao buscar dados do Header no Sanity:', error);
+        return null;
+    }
+}
 
-        <div className="img">
-                <img src="./camisetaAzul.png" alt=""  className='camiseta'/>
-            </div>
+export default function MainSection() {
 
-        <div className="body">
-            
-            <div className="titleee">
-                
-                <h2><div className="h2">NOVOS MODELOS</div>PARA HOMENS</h2>
-                <p>Novas cores, agora também disponíveis nos <p className='st'>tamanhos masculinos.</p> </p>
-                <div className="b">
-                <button className='btn'> Confira já!</button>
+    const [headerData, setHeaderData] = useState(null);
+
+    useEffect(() => {
+        fetchHeaderData().then(headerData => {
+            setHeaderData(headerData);
+        });
+    }, []);
+
+    const urlFor = useSanityImage();
+
+
+    return (
+        (headerData &&
+            <div className="teste">
+                <div className="img">
+                    {urlFor && headerData.imagem && <img src={urlFor(headerData.imagem)} alt={headerData.alt} />}
+                </div>
+
+                <div className="body">
+
+                    <div className="titleee">
+
+                        <h2><div className="h2">{headerData.titulo}</div>{headerData.subtitulo}</h2>
+                        <p>{headerData.paragrafo} </p>
+                        <div className="b">
+                            <button className='btn'> <a href={headerData.link}>{headerData.titulo_botao}</a></button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        </div>
-);
-    
+        ))
+
 }

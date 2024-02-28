@@ -9,8 +9,8 @@ import ReleaseSection from './components/releaseSection';
 import BrandSection from './components/brandSection';
 import Footer from './components/footer';
 
+export default function App() {
 
-function App() {
   return (
     <div >
       <MainNavBar />
@@ -25,4 +25,3 @@ function App() {
   );
 }
 
-export default App;
