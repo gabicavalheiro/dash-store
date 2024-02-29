@@ -11,7 +11,7 @@ const useSanityImage = () => {
         setBuilder(imageUrl);
     }, []);
 
-    const urlFor = (source) => {
+    const urlFor = (assetRef) => {
         // Verificar se o construtor de URLs de imagem está disponível
         if (!builder) {
             console.error('O construtor de URLs de imagem do Sanity ainda não está configurado.');
@@ -19,7 +19,7 @@ const useSanityImage = () => {
         }
 
         // Construir e retornar a URL da imagem
-        return builder.image(source);
+        return builder.image(assetRef);
     };
 
     return urlFor;

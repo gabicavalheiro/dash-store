@@ -1,7 +1,7 @@
 export default {
     name: 'productsCatalog',
     type: 'document',
-    title: 'ProductsCatalog',
+    title: 'Seções de produtos',
     fields: [
       {
         name: 'titulo1',
@@ -22,6 +22,7 @@ export default {
         name: 'alt1',
         type: 'string',
         title: 'titulo da imagem Card 1'
+      
       },
       {
         name: 'titulo2',

@@ -2,29 +2,59 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import './promotionSection.css'
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import client from '../sanity.mjs';
+import useSanityImage from '../hooks/useSanityImage';
+
+
+async function fetchData() {
+    try {
+        const query = `*[_type == "promotion"][0]`;
+        const Data = await client.fetch(query);
+        console.log('Dados do:',Data); 
+        return Data;
+    } catch (error) {
+        console.error('Erro ao buscar dados no Sanity:', error);
+        return null;
+    }
+}
+
 
 export default function PromotionSection() {
+
+    const [Data, setData] = useState(null);
+
+    useEffect(() => {
+        fetchData().then(Data => {
+            setData(Data);
+        });
+    }, []);
+
+    const urlFor = useSanityImage();
+
+
     return (
+        (Data &&
         <div className="promotion">
             <div className="text">
                 <div className="paragrafo">
-                    <p>subtitulo</p>
+                    <p>{Data.subtitulo}</p>
                 </div>
 
                 <div className="tituloo">
-                    titulo
+                    {Data.titulo}
                 </div>
 
                 <div className="botao">
-                    <button className="botaoa">Confira já!</button>
+                    <button className="botaoa">{Data.textoBotao}</button>
                 </div>
             </div>
 
             <div className="img">
-                <img src="./camisetaAzul.png" alt=""  width="300"/>
+            {urlFor && Data.imagem && <img src={urlFor(Data.imagem)} alt={Data.alt} width="300"  />}
+
             </div>
         </div>
-    )
-}
+    )  )
+} 
 

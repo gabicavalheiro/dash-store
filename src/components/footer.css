@@ -26,9 +26,31 @@
     flex-direction: row;
     justify-content: center;
     gap: 10%;
+
 }
 
 .titlee{
     font-family: Gotham-black;
     font-size: 120% ;
 }
+
+.text .ctt a {
+    text-decoration: none;
+    color: white;
+    font-family: Gotham;
+ }
+
+ .ctt a:hover{
+    padding: 1px;
+ }
+
+ .cttt{
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    font-size: 150%;
+ }
+
+ .cttt i:hover{
+    cursor: pointer;
+ }

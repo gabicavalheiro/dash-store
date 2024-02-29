@@ -1,7 +1,7 @@
 export default {
     name: 'header',
     type: 'document',
-    title: 'Header',
+    title: 'Seção Principal',
     fields: [
       {
         name: 'titulo',

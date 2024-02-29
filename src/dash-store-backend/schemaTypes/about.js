@@ -1,7 +1,7 @@
 export default {
     name: 'about',
     type: 'document',
-    title: 'About',
+    title: 'Sobre nós',
     fields: [
       {
         name: 'texto',
