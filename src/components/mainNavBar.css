@@ -16,8 +16,7 @@
 
 .section {
     background-color: var(--bg-cinza);
-    font-family:  'Gotham', sans-serif;
-    
+    font-family:  'Gotham', sans-serif
    
 }
 
@@ -64,3 +63,40 @@
     color: #040F41;
 }
 
+.cabecalho-mobile{
+    display: none;
+}
+
+
+@media (max-width: 836px){
+    .cabecalho{
+        display: none;
+    }
+
+    .cabecalho-mobile {
+        position: relative; /* Tornando o elemento pai */
+        display: flex;
+        justify-content: space-between; /* Distribui os elementos igualmente ao longo do eixo principal (horizontalmente) */
+        align-items: center; /* Centraliza os elementos ao longo do eixo transversal (verticalmente) */
+        padding-top: 15%;
+        background-color: var(--bg-cinza) ;
+    }
+    
+    .logo-mobile {
+        position: absolute;
+        left: 4%;
+        /* Estilos para o logotipo */
+    }
+
+    .head-mobile {
+        position: absolute;
+        right: 4%;
+        /* Estilos para o menu dropdown */
+    }
+
+    .bi-list {
+        font-size: 50px; /* Ajusta o tamanho do ícone */
+        color:#040F41; /* Define a cor do ícone como vermelho */
+    }
+
+} 
