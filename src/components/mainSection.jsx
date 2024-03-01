@@ -50,6 +50,12 @@ export default function MainSection() {
                     </div>
                 </div>
             </div>
-        ))
+
+        )
+    
+        
+        
+        
+        )
 
 }

@@ -75,3 +75,16 @@
     color: white;
     text-decoration: none;
 }
+
+
+
+
+@media (max-width: 836px){
+   .teste{
+    display: flex;
+   }
+
+   .teste img{
+    display: none;
+   }
+} 
