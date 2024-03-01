@@ -15,25 +15,44 @@
   }
 
 
-.titulo h1{
+
+
+.titulo {
     font-family: Gotham-black;
-    color: #040F41;
+    color: var(--azul-escuro) ;
+    font-size: 30px;
+    margin-top: 10%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-left: -1%;
+    justify-content: center;
 }
-.cards{
+
+
+
+
+.roww {
+    margin-top: 5%;
     display: flex;
+    justify-content: center; /* Centralizando os cards horizontalmente dentro de cada linha */
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    gap: 4%; /* Espaçamento entre os cards */
+    margin-bottom: 20px; /* Adiciona espaço entre as linhas de cards */
 }
+
+.rowww{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center; /* Centralizando os cards horizontalmente dentro de cada linha */
+    flex-direction: row;
+    gap: 4%; /* Espaçamento entre os cards */
+    margin-bottom: 20px; /* Adiciona espaço entre as linhas de cards */   
+}
+
+
 
 .block{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
 
 }
 
@@ -42,6 +61,15 @@
     height: 300px;
     border-radius: 15px;
     background-color: var(--bg-cinza-card);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+   
+    width: 250px;
+    height: 280px;
 }
 
 .tit{
@@ -52,7 +80,9 @@
 .line{
     display: flex;
     flex-direction: row;
-    gap: 30%;
+    justify-content: space-between;
+    width: 300px ;
+
 }
 
 .produto{
@@ -71,7 +101,7 @@
 
 .categoria p{
     color: var(--azul-escuro);
-    margin-top: 2px;
+    margin-top: 5px;
 }
 
 .categoria{
@@ -79,3 +109,5 @@
     font-family: 'Gotham';
     font-size:small
 }
+
+

@@ -4,11 +4,13 @@ export default {
   name: 'catalog',
   type: 'document',
   title: 'Ultimos Lançamentos',
+  
   fields: [
       {
           name: 'cards',
           title: 'Cards',
           type: 'array',
+          description: 'Serão exibidos na página apenas 4 cards.',
           of: [
               {
                   type: 'object',
@@ -17,6 +19,7 @@ export default {
                           name: 'imagem',
                           type: 'image',
                           title: 'Imagem',
+                          description: 'A imagem precisa estar em .png e com o fundo removido.'
                       },
                       {
                           name: 'titulo',

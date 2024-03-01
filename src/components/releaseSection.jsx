@@ -1,39 +1,28 @@
 import { useState, useEffect } from 'react';
-import imageUrlBuilder from '@sanity/image-url';
 import client from '../sanity.mjs';
-import styles from './releaseSection.css'
+import './releaseSection.css'
 import useSanityImage from '../hooks/useSanityImage';
 
 
 
-const preprocessCardData = async (card, urlFor) => {
-     
-    const {  imagem } = card;
+const getImageUrlComplete = async (card, urlFor) => {
+    const { imagem } = card;
 
-    const imageUrl = imagem?.asset?._ref ? urlFor(imagem.asset._ref) : null; 
+    const imageUrl = imagem?.asset?._ref ? urlFor(imagem.asset._ref) : null;
     let imageUrlComplete = null;
     if (imageUrl && imageUrl.options && imageUrl.options.baseUrl && imageUrl.options.source) {
         const { baseUrl, projectId, dataset, source } = imageUrl.options;
-        const imageName = source.substring(6); 
-        const formattedImageName = imageName.replace('-png', '.png'); 
+        const imageName = source.substring(6);
+        const formattedImageName = imageName.replace('-png', '.png');
         imageUrlComplete = `${baseUrl}/images/${projectId}/${dataset}/${formattedImageName}`;
     }
 
-    if (imageUrlComplete) {
-        console.log('array da img', imageUrlComplete);
-    }
-
-    return {
-        imageUrlComplete,
-        
-    };
+    return imageUrlComplete;
 };
-
-
 
 const useFetchCardDataAndRender = () => {
     const [cardData, setCardData] = useState(null);
-    const urlFor = useSanityImage(); 
+    const urlFor = useSanityImage();
 
     useEffect(() => {
         const fetchCardData = async () => {
@@ -44,7 +33,13 @@ const useFetchCardDataAndRender = () => {
                 if (response && Array.isArray(response.cards)) {
                     const allCards = response.cards.flatMap(array => array);
 
-                    setCardData(allCards);
+                    const cardImageData = await Promise.all(allCards.map(async (card) => {
+                        const imageUrlComplete = await getImageUrlComplete(card, urlFor);
+                        const categoriaData = await client.getDocument(card.categoria?._ref);
+                        return { ...card, imageUrlComplete, categoriaData };
+                    }));
+
+                    setCardData(cardImageData);
                 } else {
                     console.error('A resposta não contém dados válidos.');
                 }
@@ -54,49 +49,79 @@ const useFetchCardDataAndRender = () => {
         };
 
         fetchCardData();
-    }, []);
+    }, [urlFor]);
 
-    return { cardData, urlFor }; 
+    return cardData;
 };
 
 export default function CardComponent() {
-    const { cardData, urlFor } = useFetchCardDataAndRender(); 
-    
+    const cardData = useFetchCardDataAndRender();
 
-  
+    // Limitando o número de cards renderizados a 4
+    const limitedCardData = cardData ? cardData.slice(0, 4) : [];
+
     return (
-        <div className="release">
+        <div className="section">
             <div className="titulo">
-                <h1>ÚLTIMOS LANÇAMENTOS</h1>
-            </div>
-            <div className="cards">
-                {cardData && cardData.map(card => {
-                    return (
-                        <div className="block" >
-                            <div className="box">
-                               { imageUrlComplete && <img src={imageUrlComplete}/>}
-                            </div>
-                            <div className="tit">
-                                <div className="line">
-                                    <div className="produto">
-                                        {card.titulo}
-                                    </div>
-                                    <div className="preco">
-                                        {card.preco}
-                                    </div>
-                                </div>
-                                <div className="categoria">
-                                    <p>Em </p>
-                                </div>
-                            </div>
-                        </div>
+                    ÚLTIMOS LANÇAMENTOS
+                </div>
+            <div className="release">
+                
 
-                    );
-                })}
+                    <div className="roww">
+                        {limitedCardData.slice(0, 2).map((card) => (
+                            <div className="block" key={card._key}>
+                                <div className="box">
+                                    {card.imageUrlComplete && <img src={card.imageUrlComplete} alt={card.titulo} className='image' />}
+                                </div>
+                                <div className="tit">
+                                    <div className="line">
+                                        <div className="produto">
+                                            {card.titulo}
+                                        </div>
+                                        <div className="preco">
+                                            {card.preco}
+                                        </div>
+                                    </div>
+                                    <div className="categoria">
+                                        <p>Em {card.categoriaData?.categorias || 'Categoria Desconhecida'}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="rowww">
+                        {limitedCardData.slice(2, 4).map((card) => (
+                            <div className="block" key={card._key}>
+                                <div className="box">
+                                    {card.imageUrlComplete && <img src={card.imageUrlComplete} alt={card.titulo} className='image' />}
+                                </div>
+                                <div className="tit">
+                                    <div className="line">
+                                        <div className="produto">
+                                            {card.titulo}
+                                        </div>
+                                        <div className="preco">
+                                            {card.preco}
+                                        </div>
+                                    </div>
+                                    <div className="categoria">
+                                        <p>Em {card.categoriaData?.categorias || 'Categoria Desconhecida'}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+
+                    <div className="btn"><button>Ver mais</button></div>
+                </div>
             </div>
-        </div>
     );
-};
+}
+
+
 
 
 
