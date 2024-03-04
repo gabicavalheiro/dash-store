@@ -1,0 +1,119 @@
+:root {
+    --azul-escuro: #040F41;
+    --azul-claro: #646A87;
+    --bg-cinza-card: #F5F5F5;
+    --bg-cinza: #EFEDED;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('/Gotham-font-family/Gotham/Gotham-Light.otf') format('truetype'); /* Substitua o caminho pelo caminho real do arquivo de fonte */
+  }
+@font-face {
+    font-family: 'Gotham-black';
+    src: url('/Gotham-font-family/Gotham/Gotham-Black.otf') format('truetype'); /* Substitua o caminho pelo caminho real do arquivo de fonte */
+  }
+
+
+
+
+.titulo {
+    font-family: Gotham-black;
+    color: var(--azul-escuro) ;
+    font-size: 120%;
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+
+.section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10%;
+}
+
+.roww {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center; /* Centralizando os cards horizontalmente dentro de cada linha */
+    flex-direction: row;
+    gap: 4%; /* Espaçamento entre os cards */
+    margin-bottom: 20px; /* Adiciona espaço entre as linhas de cards */
+}
+
+.rowww{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center; /* Centralizando os cards horizontalmente dentro de cada linha */
+    flex-direction: row;
+    gap: 4%; /* Espaçamento entre os cards */
+    margin-bottom: 20px; /* Adiciona espaço entre as linhas de cards */   
+}
+
+
+
+.block{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.box{
+    width: 300px ;
+    height: 300px;
+    border-radius: 15px;
+    background-color: var(--bg-cinza-card);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image{
+   
+    width: 250px;
+    height: 280px;
+}
+
+.tit{
+ 
+    margin-top: 7%;
+}
+
+.line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 300px ;
+
+}
+
+.produto{
+    font-family: Gotham;
+    font-weight: bold;
+    color: #040F41;
+}
+
+.preco{
+    display: flex;
+    justify-content: flex-end;
+    border: #040F41 2px solid;
+    border-radius: 50px; 
+    padding: 5px 10px;
+}
+
+.categoria p{
+    color: var(--azul-escuro);
+    margin-top: 5px;
+}
+
+.categoria{
+    color: #040F41;
+    font-family: 'Gotham';
+    font-size:small
+}
+
+

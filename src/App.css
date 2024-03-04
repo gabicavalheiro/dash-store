@@ -52,6 +52,18 @@
     display: block;
   }
 
+  .releaseMobile{
+    display: block;
+  }
+
+  .releaseSection{
+    display: none;
+  }
+
+  .brand{
+    display: none;
+  }
+
 
 }
 @media (min-width: 836px){
@@ -63,5 +75,12 @@
     display: none;
   }
 
+  .releaseMobile{
+    display: none;
+  }
+
+  .releaseSection{
+    display: block;
+  }
 
 }
