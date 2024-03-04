@@ -32,7 +32,7 @@ export default function AboutSection() {
     return (
         (Data &&
         <div className='about'>
-            <div className="titulo">
+            <div className="titulooo">
                 SOBRE NÓS           
             </div>
             <div className="texto">

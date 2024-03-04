@@ -21,3 +21,26 @@
     align-items: center;
     margin: 4%;
 }
+
+.titulooo{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-family: Gotham-black;
+        color: #040F41;
+        margin-top: 20%;
+        font-size: 200%;
+
+}
+
+@media (max-width: 836px){
+    .titulooo{
+        font-size: 120%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-family: Gotham-black;
+        color: #040F41;
+        margin-top: 20%;
+    }
+}

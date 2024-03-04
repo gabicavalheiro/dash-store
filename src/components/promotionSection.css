@@ -63,3 +63,29 @@
    background-color: #daddee;
 }
 
+
+@media (max-width: 836px) {
+    .img{
+        display: none;
+    }
+
+    .text{
+        font-size: 70%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    .text .tituloo{
+        font-size: 250%;
+    }
+
+
+    .botao{
+        display: flex;
+        justify-content: center;
+    }
+    .botaoa{
+        padding: 5px 10px;
+        
+    }
+}
