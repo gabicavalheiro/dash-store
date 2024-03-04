@@ -79,7 +79,7 @@ export default function ProductsSectionMobile() {
 
             <div className="productsMobile">
                 <div className="titul">
-                    ÚLTIMOS LANÇAMENTOS
+                    NOSSOS PRODUTOS
                 </div>
 
                 <div>
@@ -90,7 +90,7 @@ export default function ProductsSectionMobile() {
                                     <h3>{card.titulo}</h3>
                                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
                                         <img src={card.imageUrlComplete} alt={card.alt} style={{ maxWidth: '150px', maxHeight: '200px', width: 'auto', height: 'auto' }} />
-                                    </div>                                
+                                    </div>
                                     <div> <a href="">Ver </a></div> {/* Troque o <p> por <div> */}
                                 </div>
                             ))}
