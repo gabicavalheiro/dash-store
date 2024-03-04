@@ -69,6 +69,10 @@ export default function ProductsSection() {
         return chunks;
     }
 
+
+
+ 
+
     return (
         <div className="section">
             <div className="titulo">
@@ -97,5 +101,8 @@ export default function ProductsSection() {
                 <button>Ver mais</button>
             </div>
         </div>
+
+
+
     )
 }

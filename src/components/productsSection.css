@@ -6,15 +6,15 @@
 }
 
 
-.section{
+.section {
     background: white;
     height: 100%;
     padding-bottom: 5%;
 }
 
-.titulo{
+.titulo {
     font-family: Gotham-black;
-    color: var(--azul-escuro) ;
+    color: var(--azul-escuro);
     font-size: 30px;
     margin-top: 10%;
     display: flex;
@@ -22,7 +22,7 @@
     justify-content: center;
 }
 
-.cards{
+.cards {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,18 +31,18 @@
 
 }
 
-.card{
+.card {
     width: 450px;
     height: 320px;
     border: none;
     border-radius: 15px;
     background-color: var(--bg-cinza-card);
     margin-top: -5%;
-    
+
 }
 
 
-h1{
+h1 {
     font-family: Gotham;
     font-weight: 900;
     position: absolute;
@@ -52,14 +52,14 @@ h1{
     text-transform: uppercase;
 }
 
-.imagem{
+.imagem {
     display: flex;
     justify-content: flex-end;
     margin-right: 10%;
     margin-top: 12%;
 }
 
-.seta{
+.seta {
     display: flex;
     align-items: flex-end;
     margin-left: 10%;
@@ -69,17 +69,23 @@ h1{
     cursor: pointer;
 }
 
-.btn{
+.btn {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 5%;
 }
 
-.btn button{
+.btn button {
     padding: 20px 40px;
     background-color: #040F41;
     color: white;
     border: none;
     border-radius: 15px
 }
+
+
+.mobile {
+    display: none;
+}
+

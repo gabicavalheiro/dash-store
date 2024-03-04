@@ -8,6 +8,7 @@ import PromotionSection from './components/promotionSection';
 import ReleaseSection from './components/releaseSection';
 import BrandSection from './components/brandSection';
 import Footer from './components/footer';
+import ProductsSectionMobile from './components/productsSectionMobile';
 
 export default function App() {
 
@@ -16,7 +17,8 @@ export default function App() {
       <MainNavBar />
       <MainSection/>
       <AboutSection/>
-      <ProductsSection/> 
+      <div className="products"><ProductsSection/> </div>
+      <div className="productsMobile"><ProductsSectionMobile/></div>
       <PromotionSection/>
       <ReleaseSection/>
       <BrandSection/>

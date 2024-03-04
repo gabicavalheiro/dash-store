@@ -1,0 +1,68 @@
+@media  (max-width: 836px){
+    .productsMobile {
+        position: relative; /* Para que o botão fique relativo ao contêiner pai */
+      }
+  
+  
+    .carousel-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    
+    .card-carrossel {
+        text-align: center;
+        color: #040F41;
+        
+    }
+    .card-carrossel a {
+        color: white;
+        font-size: 70%;
+        text-decoration: none;
+        font-family: Gotham;
+        background-color: #8d8c8c;
+        padding: 7px;
+        border-radius: 5px;
+        padding-bottom: 5px;
+    }
+   
+    .card-carrossel h3{
+        margin-top: 20%;
+        margin-bottom: 5%;
+        font-size: 120%;
+        color: #040F41;
+        font-family: Gotham;
+        font-weight: bolder;
+    }
+
+    .productsMobile{
+        margin-top: 30%;
+        margin-bottom: 50%;
+    }
+    .titul{
+        font-family: Gotham-black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        font-size: 120%;
+        color: #040F41;
+    }
+    
+    .arrow-button {
+        position: absolute;
+        top: 100%;
+        right: 45%;
+        background: transparent;
+        border: none;
+        font-size: 24px;
+        color: #040F41; /* Cor das setas */
+        cursor: pointer;
+        outline: none;
+        margin-top: 10%;
+      }
+      
+    
+ 
+    }
