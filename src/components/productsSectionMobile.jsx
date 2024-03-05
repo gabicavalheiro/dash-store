@@ -87,11 +87,13 @@ export default function ProductsSectionMobile() {
                         <Slider {...settings} ref={sliderRef}>
                             {cardData.map((card, index) => (
                                 <div key={index} className="card-carrossel">
+                                    <div className="cardb">
                                     <h3>{card.titulo}</h3>
                                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
-                                        <img src={card.imageUrlComplete} alt={card.alt} style={{ maxWidth: '150px', maxHeight: '200px', width: 'auto', height: 'auto' }} />
+                                        <img src={card.imageUrlComplete} alt={card.alt} style={{ maxWidth: '150px', maxHeight: '200px', backgroundColor:'#F5F5F5', padding:'20px 30px', borderRadius:'15px' }} />
                                     </div>
-                                    <div> <a href="">Ver </a></div> {/* Troque o <p> por <div> */}
+                                    <div> <a href={card.link}>Ver </a></div> {/* Troque o <p> por <div> */}
+                                    </div>
                                 </div>
                             ))}
                         </Slider>

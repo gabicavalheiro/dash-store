@@ -60,12 +60,14 @@ export default function Footer() {
                 </div>
                 <div className="content">
                     <div className="text">
+                        <div className="redes">
                         <div className="titlee">
                             Nos acompanhe nas redes sociais
                         </div>
                         <div className="cttt">
                         <i class="bi bi-instagram"> <a href={Data.Link_i}></a></i>
                         <i class="bi bi-whatsapp"><a href={Data.Link_w}></a></i>                       
+                     </div>
                      </div>
                     </div>
                 </div>

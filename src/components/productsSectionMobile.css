@@ -18,14 +18,9 @@
         
     }
     .card-carrossel a {
-        color: white;
+        color: #040F41;
         font-size: 70%;
-        text-decoration: none;
         font-family: Gotham;
-        background-color: #8d8c8c;
-        padding: 7px;
-        border-radius: 5px;
-        padding-bottom: 5px;
     }
    
     .card-carrossel h3{
@@ -53,7 +48,8 @@
     .arrow-button {
         position: absolute;
         top: 100%;
-        right: 45%;
+        left: 50%; /* Alterado para left */
+        transform: translateX(-50%); /* Adicionado para centralizar */
         background: transparent;
         border: none;
         font-size: 24px;
@@ -62,7 +58,9 @@
         outline: none;
         margin-top: 10%;
       }
-      
+
+
+     
     
  
     }
