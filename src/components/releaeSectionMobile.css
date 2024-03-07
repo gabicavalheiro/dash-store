@@ -26,6 +26,17 @@
     justify-content: center;
     flex-direction: column;
     align-items: center; /* Adicione esta linha */
+    
+  }
+  
+
+.column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; /* Adicione esta linha */
+    margin-right: 20%;
+    
   }
   
 
