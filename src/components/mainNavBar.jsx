@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import './mainNavBar.css';
 
 export default function MainNavBar() {
@@ -42,9 +42,12 @@ export default function MainNavBar() {
         }
       };
 
+      const mainRef = useRef(null)
+
+
     return (
         <>
-            <div className="cabecalho">
+            <div className="cabecalho"  id='main' ref={mainRef}>
                 <div className="logo">
                     <a href="#">
                         <img src="./logoAzul.png" alt="logo" className="titulo" />

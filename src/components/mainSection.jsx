@@ -30,11 +30,10 @@ export default function MainSection() {
 
     const urlFor = useSanityImage();
 
-    const mainRef = useRef(null)
 
     return (
         (headerData &&
-            <div className="teste" id='main' ref={mainRef}>
+            <div className="teste">
                 <div className="img">
                     {urlFor && headerData.imagem && <img src={urlFor(headerData.imagem)} alt={headerData.alt} />}
                 </div>

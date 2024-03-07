@@ -87,7 +87,7 @@ export default function CardComponent() {
                                         </div>
                                     </div>
                                     <div className="categoria">
-                                        <p>Em {card.categoriaData?.categorias || 'Categoria Desconhecida'}</p>
+                                        <p>Em {card.categoriaData?.categorias || 'Categoria Desconhecida'} <a href={card.LinkCat}></a></p>
                                     </div>
                                 </div>
                             </div>

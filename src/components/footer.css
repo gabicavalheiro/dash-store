@@ -26,10 +26,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 10%;
-    padding-top: 10%;
+    gap: 15%;
+    
 
 }
+
 
 .redes{
     margin-top: -25%;
@@ -50,7 +51,8 @@
  }
 
  .ctt a:hover{
-    padding: 1px;
+    cursor: pointer;
+    font-weight: bold;
  }
 
  .cttt{
@@ -62,6 +64,8 @@
 
  .cttt i:hover{
     cursor: pointer;
+    font-weight: bold;
+
  }
 
 
