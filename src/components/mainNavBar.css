@@ -99,4 +99,15 @@
         color:#040F41; /* Define a cor do ícone como vermelho */
     }
 
+    .dropdown, .dropdown:hover{
+        background-color: #EFEDED;
+        border: none;
+    }
+
+    .dropdown a{
+        text-decoration: none;
+        color: #040F41;
+    }
+
+    
 } 
