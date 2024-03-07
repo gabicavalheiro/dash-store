@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './footer.css'
 import client from '../sanity.mjs';
 
@@ -28,11 +28,58 @@ export default function Footer() {
         });
     }, []);
 
+    const contatosRef = useRef(null)
+
+    const scrollToAboutSection = () => {
+        const aboutSection = document.getElementById('aboutSection');
+        if (aboutSection) {
+          window.scrollTo({
+            top: aboutSection.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
+    const scrollToMain = () => {
+        const main = document.getElementById('main');
+        if (main) {
+          window.scrollTo({
+            top: main.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
+    const scrollToDestaques = () => {
+        const productsSection = document.getElementById('productsSection');
+        if (productsSection) {
+          window.scrollTo({
+            top: productsSection.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
+    const scrollToLancamentos = () => {
+        const lancamentos = document.getElementById('lancamentos');
+        if (lancamentos) {
+          window.scrollTo({
+            top: lancamentos.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
+    const scrollToContatos = () => {
+        const contatos = document.getElementById('contatos');
+        if (contatos) {
+          window.scrollTo({
+            top: contatos.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
 
     return (
 
         (Data &&
-            <div className="footer">
+            <div className="footer" id="contatos" ref={contatosRef}>
                 <div className="content">
                     <div className="text">
                         <div className="titlee">
@@ -40,10 +87,10 @@ export default function Footer() {
                         </div>
                         <div className="ctt" >
                             <ul>
-                                <li><a href="">Início</a></li>
-                                <li><a href="">Sobre nós</a></li>
-                                <li><a href="">Destaques</a></li>
-                                <li><a href="">Produtos</a></li>
+                                <li><a onClick={scrollToMain} className='aa'>Início</a></li>
+                                <li><a onClick={scrollToAboutSection} className='aa'>Sobre</a></li>
+                                <li><a  onClick={scrollToDestaques} className='aa'>Destaques</a></li>
+                                <li><a  onClick={scrollToLancamentos} className='aa'>Lançamentos</a></li>
                             </ul>
                         </div>
                     </div>

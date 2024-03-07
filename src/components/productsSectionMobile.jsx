@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs"; // Importe os ícones de seta
+import {  BsArrowRight } from "react-icons/bs"; // Importe os ícones de seta
 import client from "../sanity.mjs";
 import useSanityImage from "../hooks/useSanityImage";
 import './productsSectionMobile.css'; // Importe o arquivo de estilos CSS
@@ -70,10 +70,7 @@ export default function ProductsSectionMobile() {
         sliderRef.current.slickNext();
     };
 
-    const goToPrevSlide = () => {
-        sliderRef.current.slickPrev();
-    };
-
+  
     return (
         <>
 

@@ -13,13 +13,16 @@ import ReleaseSectionMobile from './components/releaseSectionMobile';
 
 export default function App() {
 
+  
+  
+
   return (
     <div >
       <MainNavBar />
       <MainSection />
       <AboutSection />
       <div className="products"><ProductsSection /> </div>
-      <div className="productsMobile"><ProductsSectionMobile /></div>
+      <div className="productsMobile" ><ProductsSectionMobile /></div>
       <PromotionSection />
       <div className="releaseSection"> <ReleaseSection /></div>
       <div className="releaseMobile"><ReleaseSectionMobile/></div>

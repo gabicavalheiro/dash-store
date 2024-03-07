@@ -1,7 +1,7 @@
 import './productsSection.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import client from '../sanity.mjs';
 import useSanityImage from '../hooks/useSanityImage';
 
@@ -71,36 +71,43 @@ export default function ProductsSection() {
 
 
 
- 
+    const productsSectionRef = useRef(null);
+
 
     return (
+        <section id="productsSection" ref={productsSectionRef}>
         <div className="section">
             <div className="titulo">
                 NOSSOS PRODUTOS
             </div>
 
-            {chunkArray(limitedCardData, 2).map((row, rowIndex) => (
-                <div className="cards" key={rowIndex}>
-                    {row.map((product, index) => (
-                        <div className="card" key={index}>
-                            <div className="produto">
-                                <h1>{product.titulo}</h1>
+
+            <div className="a">
+                {chunkArray(limitedCardData, 2).map((row, rowIndex) => (
+                    <div className="cards" key={rowIndex}>
+                        {row.map((product, index) => (
+                            <div className="card" key={index}>
+                                <div className="produto">
+                                    <h1>{product.titulo}</h1>
+                                </div>
+                                <div className="imagem">
+                                    <img src={product.imageUrlComplete} alt={product.titulo} width="200" height="230" />
+                                </div>
+                                <div className="seta">
+                                    <i className="bi bi-arrow-right"><a href={product.link}></a></i>
+                                </div>
                             </div>
-                            <div className="imagem">
-                                <img src={product.imageUrlComplete} alt={product.titulo} width="200" height="230" />
-                            </div>
-                            <div className="seta">
-                                <i className="bi bi-arrow-right"><a href={product.link}></a></i>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                
             ))}
+            </div>
 
             <div className="btn">
                 <button>Ver mais</button>
             </div>
         </div>
+        </section>
 
 
 

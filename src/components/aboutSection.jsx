@@ -2,7 +2,7 @@ import './aboutSection.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import client from '../sanity.mjs';
 
 
@@ -29,8 +29,12 @@ export default function AboutSection() {
         });
     }, []);
 
+    const aboutSectionRef = useRef(null);
+
+
     return (
         (Data &&
+            <section  id="aboutSection" ref={aboutSectionRef}>    
         <div className='about'>
             <div className="titulooo">
                 SOBRE NÓS           
@@ -39,6 +43,7 @@ export default function AboutSection() {
                 {Data.texto}
             </div>
         </div>
+        </section>
         )
     )
 }

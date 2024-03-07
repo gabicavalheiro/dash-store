@@ -36,13 +36,13 @@ export default function BrandSection(){
         <div className="brandSection">
             <div className="images">
                 <div className="ca">
-                {urlFor && Data.imagem && <img src={urlFor(Data.imagem)} width='150'height='150' />}
+                {urlFor && Data.imagem && <img src={urlFor(Data.imagem)} alt={Data.alt} width='150'height='150' />}
                 </div>
                 <div className="ca">
-                {urlFor && Data.imagem2 && <img src={urlFor(Data.imagem2)} width='150'height='150' />}
+                {urlFor && Data.imagem2 && <img src={urlFor(Data.imagem2)} alt={Data.alt} width='150'height='150' />}
                 </div>
                 <div className="ca">
-                {urlFor && Data.imagem3 && <img src={urlFor(Data.imagem3)} width='150'height='150' />}
+                {urlFor && Data.imagem3 && <img src={urlFor(Data.imagem3)} alt={Data.alt} width='150'height='150' />}
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import client from '../sanity.mjs';
 import './releaseSection.css'
 import useSanityImage from '../hooks/useSanityImage';
@@ -60,8 +60,11 @@ export default function CardComponent() {
     // Limitando o número de cards renderizados a 4
     const limitedCardData = cardData ? cardData.slice(0, 4) : [];
 
+
+    const lancamentosRef = useRef(null);
+
     return (
-        <div className="section">
+        <div className="section"  id="lancamentos" ref={lancamentosRef}>
             <div className="titulo">
                     ÚLTIMOS LANÇAMENTOS
                 </div>

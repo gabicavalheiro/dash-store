@@ -82,7 +82,12 @@
 
 .tit{
  
-    margin-top: 7%;
+    margin-top: 10%;
+   
+}
+
+.tit .categoria{
+    margin-top: -5%;
 }
 
 .line{
@@ -106,7 +111,7 @@
     border: #040F41 2px solid;
     border-radius: 50px; 
     padding: 5px 10px;
-    font-size: 80%;
+    font-size: 60%;
 }
 
 .categoria p{

@@ -5,6 +5,43 @@ import React from 'react';
 import './mainNavBar.css';
 
 export default function MainNavBar() {
+    const scrollToAboutSection = () => {
+        const aboutSection = document.getElementById('aboutSection');
+        if (aboutSection) {
+          window.scrollTo({
+            top: aboutSection.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
+    const scrollToDestaques = () => {
+        const productsSection = document.getElementById('productsSection');
+        if (productsSection) {
+          window.scrollTo({
+            top: productsSection.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
+    const scrollToLancamentos = () => {
+        const lancamentos = document.getElementById('lancamentos');
+        if (lancamentos) {
+          window.scrollTo({
+            top: lancamentos.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
+    const scrollToContatos = () => {
+        const contatos = document.getElementById('contatos');
+        if (contatos) {
+          window.scrollTo({
+            top: contatos.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      };
+
     return (
         <>
             <div className="cabecalho">
@@ -18,10 +55,11 @@ export default function MainNavBar() {
                     <nav className="navbar"> {/* Certifique-se de que a classe "navbar" está aplicada aqui */}
                         <div className="nav">
                             <div className="container">
-                                <a href="#"> Início </a>
-                                <a href="#"> Destaques </a>
-                                <a href="#"> Produtos </a>
-                                <a href="#"> Contato </a>
+                                <a onClick={scrollToAboutSection} className='aa'>Sobre</a>
+                                <a  onClick={scrollToDestaques} className='aa'>Destaques</a>
+                                <a  onClick={scrollToLancamentos} className='aa'>Lançamentos</a>
+                                <a  onClick={scrollToContatos} className='aa'>Contatos</a>
+                               
                             </div>
                         </div>
                     </nav>
@@ -29,8 +67,6 @@ export default function MainNavBar() {
 
                 <div className="icons"> </div>
             </div>
-
-
 
             <div className="cabecalho-mobile">
                 <div className="logo-mobile">
@@ -42,8 +78,8 @@ export default function MainNavBar() {
                     <nav className="navbar"> {/* Certifique-se de que a classe "navbar" está aplicada aqui */}
                         <div className="nav-mobile">
                             <div class="dropdown">
-                                <button class="btn dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-list">    </i>
+                                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-list"></i>
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Início</a></li>
@@ -52,20 +88,10 @@ export default function MainNavBar() {
                                     <li><a class="dropdown-item" href="#">Contato</a></li>
                                 </ul>
                             </div>
-
                         </div>
                     </nav>
                 </div>
-
             </div>
-
-
         </>
     );
 }
-
-
-
-
-
-

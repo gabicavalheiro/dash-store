@@ -1,6 +1,6 @@
 import './mainSection.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import React from 'react';
 import client from '../sanity.mjs';
@@ -30,10 +30,11 @@ export default function MainSection() {
 
     const urlFor = useSanityImage();
 
+    const mainRef = useRef(null)
 
     return (
         (headerData &&
-            <div className="teste">
+            <div className="teste" id='main' ref={mainRef}>
                 <div className="img">
                     {urlFor && headerData.imagem && <img src={urlFor(headerData.imagem)} alt={headerData.alt} />}
                 </div>
