@@ -14,18 +14,15 @@
     src: url('/Gotham-font-family/Gotham/Gotham-Black.otf') format('truetype'); /* Substitua o caminho pelo caminho real do arquivo de fonte */
   }
 
-.section {
-    background-color: var(--bg-cinza);
-    font-family:  'Gotham', sans-serif
-   
-}
 
-.cabecalho{
+
+.cabecalho-prod{
     display: flex;
-    justify-content: space-around;
-    flex: row;
-    padding-top: 40px;
-    background-color: var(--bg-cinza) ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  
    
 }
 
@@ -35,28 +32,32 @@
 
 
 
-.nav{
+.nav-prod{
     width: auto;
-    height: 60px;
+padding: 15px;
     background-color: var(--azul-escuro);
     border-radius: 50px;
     align-items: center;
 }
 
-.container{
+.container-prod{
     margin: 0px 40px;
    display: flex;
    gap: 70px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
    
 }
 
-.container a{
+.container-prod a{
     color: white;
     text-decoration: none;
     cursor: pointer;
 }
 
-.container a:hover{
+.container-prod a:hover{
     font-weight: bolder;
 }
 

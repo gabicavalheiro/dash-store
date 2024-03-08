@@ -1,0 +1,47 @@
+
+  
+  
+  
+  
+  
+  @media (max-width: 836px){
+    .products{
+      display: none;
+    }
+  
+    .productsMobile{
+      display: block;
+    }
+  
+    .releaseMobile{
+      display: block;
+    }
+  
+    .releaseSection{
+      display: none;
+    }
+  
+    .brand{
+      display: none;
+    }
+  
+  
+  }
+  @media (min-width: 836px){
+    .products{
+      display: block;
+    }
+  
+    .productsMobile{
+      display: none;
+    }
+  
+    .releaseMobile{
+      display: none;
+    }
+  
+    .releaseSection{
+      display: block;
+    }
+  
+  }

@@ -1,35 +1,26 @@
 import './App.css';
-import AboutSection from './components/aboutSection';
-import MainNavBar from './components/mainNavBar';
-import MainSection from './components/mainSection';
-import ProductsSection from './components/productsSection';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import PromotionSection from './components/promotionSection';
-import ReleaseSection from './components/releaseSection';
-import BrandSection from './components/brandSection';
-import Footer from './components/footer';
-import ProductsSectionMobile from './components/productsSectionMobile';
-import ReleaseSectionMobile from './components/releaseSectionMobile';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Produtos from './pages/Produtos/Produtos';
 
-export default function App() {
 
-  
-  
 
-  return (
-    <div >
-      <MainNavBar />
-      <MainSection />
-      <AboutSection />
-      <div className="products"><ProductsSection /> </div>
-      <div className="productsMobile" ><ProductsSectionMobile /></div>
-      <PromotionSection />
-      <div className="releaseSection"> <ReleaseSection /></div>
-      <div className="releaseMobile"><ReleaseSectionMobile/></div>
-      <div className="brand"><BrandSection /></div>
-      
-      <Footer />
-    </div>
-  );
-}
+
+
+
+
+  function App() {
+    return (
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/produtos" element={<Produtos />} />
+        </Routes>
+      </Router>
+    );
+  }
+
+  export default App;
+
 
