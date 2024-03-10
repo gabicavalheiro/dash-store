@@ -95,7 +95,7 @@ export default function MainNavBar() {
       <div className="cabecalho-mobile">
         <div className="logo-mobile">
           <a href="#"></a>
-          <img src="./icone-dash-branco.png" alt="" width="70" height="70" />
+          <img src="./icone_dashAzul.png" alt="" width="70" height="70" />
         </div>
 
         <div className="head-mobile">
