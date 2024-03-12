@@ -35,9 +35,12 @@ const useFetchCardDataAndRender = () => {
                     const cardImageData = await Promise.all(allCards.map(async (card) => {
                         const imageUrlComplete = await getImageUrlComplete(card, urlFor);
                         const categoriaData = await client.getDocument(card.categoria?._ref);
-                        return { ...card, imageUrlComplete, categoriaData };
-                    }));
+                        const createdAt = card.createdAt; // Extrair o campo createdAt
+                        return { ...card, imageUrlComplete, categoriaData, createdAt }; // Incluir createdAt no retorno
 
+                        
+                    }));
+                    cardImageData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
                     setCardData(cardImageData);
                 } else {
                     console.error('A resposta não contém dados válidos.');
@@ -69,7 +72,7 @@ export default function ReleaseSectionMobile() {
                     {limitedCardData.map((card) => (
                         <div className="block" key={card._key}>
                             <div className="box">
-                                {card.imageUrlComplete && <img src={card.imageUrlComplete} alt={card.titulo} className='image' />}
+                                {card.imageUrlComplete && <img src={card.imageUrlComplete} alt={card.titulo} className='image' width="150" height="150" />}
                             </div>
                             <div className="tit">
                                 <div className="line">

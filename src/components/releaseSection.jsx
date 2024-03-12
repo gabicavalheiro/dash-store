@@ -36,14 +36,12 @@ const useFetchCardDataAndRender = () => {
                         const imageUrlComplete = await getImageUrlComplete(card, urlFor);
                         const categoriaData = await client.getDocument(card.categoria?._ref);
                         const createdAt = card.createdAt; // Extrair o campo createdAt
-                        console.log("createdAT",createdAt);
                         return { ...card, imageUrlComplete, categoriaData, createdAt }; // Incluir createdAt no retorno
 
                         
                     }));
                     cardImageData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
-                    console.log("Cartões organizados:", cardImageData); 
 
                     setCardData(cardImageData);
                 } else {
