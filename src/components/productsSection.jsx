@@ -36,7 +36,7 @@ const useFetchCardDataAndRender = () => {
 
                     const cardImageData = await Promise.all(allCards.map(async (card) => {
                         const imageUrlComplete = await getImageUrlComplete(card, urlFor);
-                        const categoriaData = await client.getDocument(card.titulo?._ref);
+                        const categoriaData = await client.getDocument(card.categoria?._ref);
 
                         return { ...card, imageUrlComplete, categoriaData };
                     }));
