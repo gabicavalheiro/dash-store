@@ -67,26 +67,30 @@
 
 
 @media (max-width: 836px) {
-    .img{
+    .promotion-pro{
+        margin-top: 15%;
+    }
+    
+    .img-pro{
         display: none;
     }
 
-    .text{
+    .text-pro{
         font-size: 70%;
         text-align: center;
         display: flex;
         justify-content: center;
     }
-    .text .tituloo{
+    .text-pro .tituloo-pro{
         font-size: 250%;
     }
 
 
-    .botao{
+    .botao-pro{
         display: flex;
         justify-content: center;
     }
-    .botaoa{
+    .botaoa-pro{
         padding: 5px 10px;
         
     }

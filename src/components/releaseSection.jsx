@@ -27,17 +27,23 @@ const useFetchCardDataAndRender = () => {
     useEffect(() => {
         const fetchCardData = async () => {
             try {
-                const query = `*[_type == "catalog"][0]`;
+                const query = `*[_type == "catalog"][0] `;
                 const response = await client.fetch(query);
-
                 if (response && Array.isArray(response.cards)) {
                     const allCards = response.cards.flatMap(array => array);
 
                     const cardImageData = await Promise.all(allCards.map(async (card) => {
                         const imageUrlComplete = await getImageUrlComplete(card, urlFor);
                         const categoriaData = await client.getDocument(card.categoria?._ref);
-                        return { ...card, imageUrlComplete, categoriaData };
+                        const createdAt = card.createdAt; // Extrair o campo createdAt
+                        console.log("createdAT",createdAt);
+                        return { ...card, imageUrlComplete, categoriaData, createdAt }; // Incluir createdAt no retorno
+
+                        
                     }));
+                    cardImageData.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+
+                    console.log("Cartões organizados:", cardImageData); 
 
                     setCardData(cardImageData);
                 } else {

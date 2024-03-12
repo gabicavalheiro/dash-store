@@ -28,18 +28,20 @@ const useFetchCardDataAndRender = () => {
     useEffect(() => {
         const fetchCardData = async () => {
             try {
-                const query = `*[_type == "productsCatalog"][0]`;
+                const query = `*[_type == "prodCatSection"][0]`;
                 const response = await client.fetch(query);
 
                 if (response && Array.isArray(response.cards)) {
                     const allCards = response.cards.flatMap(array => array);
+
                     const cardImageData = await Promise.all(allCards.map(async (card) => {
                         const imageUrlComplete = await getImageUrlComplete(card, urlFor);
-                        return { ...card, imageUrlComplete };
+                        const categoriaData = await client.getDocument(card.titulo?._ref);
+
+                        return { ...card, imageUrlComplete, categoriaData };
                     }));
 
                     setCardData(cardImageData);
-
                 } else {
                     console.error('A resposta não contém dados válidos.');
                 }
@@ -57,7 +59,7 @@ const useFetchCardDataAndRender = () => {
 export default function ProductsSection() {
     const cardData = useFetchCardDataAndRender();
 
-    // Limitando o número de cards renderizados a 4
+    // Limitando o número de cards renderizados a 6
     const limitedCardData = cardData ? cardData.slice(0, 6) : [];
 
     // Função para dividir o array em pedaços de tamanho 2
@@ -69,47 +71,40 @@ export default function ProductsSection() {
         return chunks;
     }
 
-
-
     const productsSectionRef = useRef(null);
-
 
     return (
         <section id="productsSection" ref={productsSectionRef}>
-        <div className="section">
-            <div className="titulo">
-                NOSSOS PRODUTOS
-            </div>
+            <div className="section">
+                <div className="titulo">
+                    NOSSOS PRODUTOS
+                </div>
 
+                <div className="a">
+                    {chunkArray(limitedCardData, 2).map((row, rowIndex) => (
+                        <div className="cards" key={rowIndex}>
+                            {row.map((product, index) => (
+                                <div className="card" key={index}>
+                                    <div className="produto">
+                                        <h1>{product.categoriaData?.categorias[0]}</h1>
+                                    </div>
+                                   
+                                    <div className="imagem">
+                                        <img src={product.imageUrlComplete} alt={product.titulo} width="200" height="230" />
+                                    </div>
+                                    <div className="seta">
+                                        <i className="bi bi-arrow-right"><a href={product.link}></a></i>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                </div>
 
-            <div className="a">
-                {chunkArray(limitedCardData, 2).map((row, rowIndex) => (
-                    <div className="cards" key={rowIndex}>
-                        {row.map((product, index) => (
-                            <div className="card" key={index}>
-                                <div className="produto">
-                                    <h1>{product.titulo}</h1>
-                                </div>
-                                <div className="imagem">
-                                    <img src={product.imageUrlComplete} alt={product.titulo} width="200" height="230" />
-                                </div>
-                                <div className="seta">
-                                    <i className="bi bi-arrow-right"><a href={product.link}></a></i>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                
-            ))}
+                <div className="btn">
+                    <button>Ver mais</button>
+                </div>
             </div>
-
-            <div className="btn">
-                <button>Ver mais</button>
-            </div>
-        </div>
         </section>
-
-
-
-    )
+    );
 }

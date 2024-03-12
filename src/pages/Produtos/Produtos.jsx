@@ -1,14 +1,17 @@
-import PromotionSection from "../../components/promotionSection";
+import Catalogo from "./Catalogo";
 import NavBar from "./NavBarProd";
 import Pro from "./pro";
+import './Produtos.css'
 
 export default function Produtos(){
     return(
         <>
+        <div className="produtos">
             <NavBar />
-            <Pro />
+        <div className="promocao"><Pro /></div> 
+        <div className="catalogo"><Catalogo/></div>
         
-              
+        </div>   
         </>
     )
 }

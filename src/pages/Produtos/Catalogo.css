@@ -1,0 +1,24 @@
+:root {
+    --azul-escuro: #040F41;
+    --azul-claro: #646A87;
+    --bg-cinza-card: #F5F5F5;
+    --bg-cinza: #EFEDED;
+}
+
+
+
+.input{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 10%;
+}
+.input-group {
+    width: 400px;
+}
+.input-center {
+    text-align: center;
+    border: #040F41 1px solid;
+    border-radius: 30px;
+    color: #FFFFFF;
+}

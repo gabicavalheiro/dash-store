@@ -14,16 +14,12 @@
     src: url('/Gotham-font-family/Gotham/Gotham-Black.otf') format('truetype'); /* Substitua o caminho pelo caminho real do arquivo de fonte */
   }
 
-.release{
-    margin-top: -150px;
-}
 
 
 .titulo {
     font-family: Gotham-black;
     color: var(--azul-escuro) ;
     font-size: 30px;
-    margin-top: 10%;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,4 +1,3 @@
-// categoryOptions.js
 export default {
   name: 'categoryOptions',
   title: 'Opções de Categoria',

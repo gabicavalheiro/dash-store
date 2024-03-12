@@ -77,42 +77,23 @@ export default function NavBar() {
 
         <div className="head-prod">
           <nav className="navbar"> {/* Certifique-se de que a classe "navbar" está aplicada aqui */}
-            <div className="nav-prod">
-              <div className="container-prod">
-                <a href="./"className='aa'>Início</a>
-                <a href="./" onClick={scrollToDestaques} className='aa'>Destaques</a>
-                <a href="./" onClick={scrollToLancamentos} className='aa'>Lançamentos</a>
-                <a href="./" onClick={scrollToContatos} className='aa'>Contatos</a>
-
-              </div>
-            </div>
+           
+          <i class="bi bi-arrow-left-circle-fill"></i>
           </nav>
         </div>
 
-        <div className="icons"> </div>
       </div>
 
-      <div className="cabecalho-mobile">
-        <div className="logo-mobile">
+      <div className="cabecalho-mobile-prod">
+        <div className="logo-mobile-prod">
           <a href="#"></a>
-          <img src="./icone-dash-branco.png" alt="" width="70" height="70" />
+          <img src="./icone_dashAzul.png" alt="" width="70" height="70" />
         </div>
 
-        <div className="head-mobile">
+        <div className="head-mobile-prod">
           <nav className="navbar"> {/* Certifique-se de que a classe "navbar" está aplicada aqui */}
-            <div className="nav-mobile">
-              <Dropdown onSelect={(eventKey) => handleDropdownSelection(eventKey)}>
-                <Dropdown.Toggle className='dropdown' variant="secondary">
-                  <i className="bi bi-list"></i>
-                </Dropdown.Toggle>
-                <Dropdown.Menu >
-                  <Dropdown.Item eventKey="about">Sobre</Dropdown.Item>
-                  <Dropdown.Item eventKey="destaques">Destaques</Dropdown.Item>
-                  <Dropdown.Item eventKey="lancamentos">Lançamentos</Dropdown.Item>
-                  <Dropdown.Item eventKey="contatos">Contatos</Dropdown.Item>
-                  </Dropdown.Menu>
-              </Dropdown>
-            </div>
+           
+           <i class="bi bi-arrow-left-circle-fill"></i>
           </nav>
         </div>
       </div>

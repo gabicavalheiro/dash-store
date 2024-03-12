@@ -2,6 +2,7 @@
   "name": "dash-store",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@sanity/client": "^6.15.1",
     "@sanity/image-url": "^1.0.2",
@@ -29,7 +30,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "type": "module",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

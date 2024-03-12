@@ -18,8 +18,9 @@
 
 .cabecalho-prod{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 100px;
     align-items: center;
   
   
@@ -38,6 +39,15 @@ padding: 15px;
     background-color: var(--azul-escuro);
     border-radius: 50px;
     align-items: center;
+}
+
+.bi-arrow-left-circle-fill{
+    color: #040F41;
+    font-size: large;
+    font-size: 30px;
+    padding: 15px;
+    cursor: pointer;
+
 }
 
 .container-prod{
@@ -65,32 +75,31 @@ padding: 15px;
     color: #040F41;
 }
 
-.cabecalho-mobile{
+.cabecalho-mobile-prod{
     display: none;
 }
 
 
 @media (max-width: 836px){
-    .cabecalho{
+    .cabecalho-prod{
         display: none;
     }
 
-    .cabecalho-mobile {
+    .cabecalho-mobile-prod {
         position: relative; /* Tornando o elemento pai */
         display: flex;
         justify-content: space-between; /* Distribui os elementos igualmente ao longo do eixo principal (horizontalmente) */
         align-items: center; /* Centraliza os elementos ao longo do eixo transversal (verticalmente) */
         padding-top: 15%;
-        background-color: var(--bg-cinza) ;
     }
     
-    .logo-mobile {
+    .logo-mobile-prod {
         position: absolute;
         left: 4%;
         /* Estilos para o logotipo */
     }
 
-    .head-mobile {
+    .head-mobile-prod {
         position: absolute;
         right: 4%;
         /* Estilos para o menu dropdown */

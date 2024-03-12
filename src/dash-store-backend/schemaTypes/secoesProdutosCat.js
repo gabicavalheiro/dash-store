@@ -1,7 +1,7 @@
 export default {
-    name: 'productsCatalog',
+    name: 'prodCatSection',
     type: 'document',
-    title: 'Seções de produtos',
+    title: 'Seções categorias em "NOSSOS PRODUTOS"',
 
     fields: [
       {
@@ -13,9 +13,10 @@ export default {
               {
                   type: 'object',
                   fields: [
-                   { name: 'titulo',
-                    type: 'string',
-                    title: 'Titulo'
+                   { name: 'categoria',
+                    type: 'reference',
+                    title: 'Categoria- titulo',
+                    to: [{ type: 'categoryOptions' }],
                   },
                   {
                     name: 'imagem',
@@ -34,7 +35,20 @@ export default {
                     title: 'titulo da imagem'
                   }
                   
-                  ] 
+                  ],
+                  preview: {
+                    select: {
+                        titulo: 'titulo',
+                        categoria: 'categoria.titulo', // Assuming 'categoria' has a 'titulo' field
+                    },
+                    prepare(selection) {
+                        const { titulo, categoria } = selection;
+                        return {
+                            title: titulo,
+                            subtitle: `Categoria: ${categoria}`,
+                        };
+                    },
+                }, 
 
                 }]}]}
 
