@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import React, { useEffect, useRef, useState } from 'react';
-import client from '../sanity.mjs';
+import client from '../sanit.mjs';
 
 
 

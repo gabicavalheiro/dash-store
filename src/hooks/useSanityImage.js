@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import imageUrlBuilder from '@sanity/image-url';
-import client from '../sanity.mjs';
+import client from '../sanit.mjs';
 
 const useSanityImage = () => {
     const [builder, setBuilder] = useState(null);

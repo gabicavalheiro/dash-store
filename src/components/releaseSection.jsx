@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import client from '../sanity.mjs';
+import client from '../sanit.mjs';
 import './releaseSection.css'
 import useSanityImage from '../hooks/useSanityImage';
 

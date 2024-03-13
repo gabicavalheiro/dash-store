@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useRef, useState } from 'react';
 
 import React from 'react';
-import client from '../sanity.mjs';
+import client from '../sanit.mjs';
 import useSanityImage from '../hooks/useSanityImage';
 
 async function fetchHeaderData() {

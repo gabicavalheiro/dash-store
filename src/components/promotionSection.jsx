@@ -3,7 +3,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import './promotionSection.css'
 
 import React, { useEffect, useState } from 'react';
-import client from '../sanity.mjs';
+import client from '../sanit.mjs';
 import useSanityImage from '../hooks/useSanityImage';
 
 

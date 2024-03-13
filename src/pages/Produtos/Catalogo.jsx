@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Catalogo.css"
 import useSanityImage from "../../hooks/useSanityImage";
-import client from "../../sanity.mjs";
+import client from "../../sanit.mjs";
 
 
 const getImageUrlComplete = async (card, urlFor) => {

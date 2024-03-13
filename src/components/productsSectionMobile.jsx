@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BsArrowRight } from "react-icons/bs"; // Importe os ícones de seta
-import client from "../sanity.mjs";
+import client from "../sanit.mjs";
 import useSanityImage from "../hooks/useSanityImage";
 import './productsSectionMobile.css'; // Importe o arquivo de estilos CSS
 
