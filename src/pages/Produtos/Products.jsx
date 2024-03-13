@@ -1,4 +1,3 @@
-import Catalogo from "./Catalogo";
 import Catalog from "./catalogSection";
 import NavBar from "./NavBarProd";
 import Pro from "./pro";
@@ -10,7 +9,6 @@ export default function Produtos(){
         <div className="produtos">
             <NavBar />
         <div className="promocao"><Pro /></div> 
-        <div className="catalogo"><Catalogo/></div>
         <div className="catalog"><Catalog/></div>
         
         </div>   
