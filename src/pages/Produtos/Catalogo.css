@@ -12,6 +12,17 @@
     flex-direction: row;
     align-items: center;
     margin-top: 5%;
+
+}
+
+input{
+    margin: 2%;
+}
+
+.search{
+    border: none;
+    background-color: white;
+    margin-right: 2%;
 }
 
 .no-toggle .dropdown-toggle::after {
@@ -71,4 +82,21 @@ p{
     font-style: 'Gotham-black';
     font-size: 110%;
     margin-top: 8%;
+}
+
+
+@media (max-width: 836px){
+
+    
+input{
+    margin: 5%;
+}
+
+.cards-catalogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 }

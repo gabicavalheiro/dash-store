@@ -83,7 +83,7 @@ export default function ReleaseSectionMobile() {
                                         {card.preco}
                                     </div>
                                 </div>
-                                <div className="categoria">
+                                <div className="categoriaaa">
                                     <p>Em {card.categoriaData?.categorias || 'Categoria Desconhecida'}</p>
                                 </div>
                             </div>

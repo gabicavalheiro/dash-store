@@ -90,7 +90,7 @@ export default function CardComponent() {
                                             {card.preco}
                                         </div>
                                     </div>
-                                    <div className="categoria">
+                                    <div className="categoriaaa">
                                         <p>Em {card.categoriaData?.categorias || 'Categoria Desconhecida'} <a href={card.LinkCat}></a></p>
                                     </div>
                                 </div>
@@ -113,7 +113,7 @@ export default function CardComponent() {
                                             {card.preco}
                                         </div>
                                     </div>
-                                    <div className="categoria">
+                                    <div className="categoriaaa">
                                         <p>Em {card.categoriaData?.categorias || 'Categoria Desconhecida'}</p>
                                     </div>
                                 </div>

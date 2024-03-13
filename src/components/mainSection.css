@@ -78,7 +78,11 @@
 }
 
 
-
+.para{
+    font-family:  Gotham;
+    font-size: medium;
+    font-weight: bold;
+}
 
 @media (max-width: 836px){
    .teste{

@@ -95,17 +95,16 @@
     font-weight: bold;
 }
 
-.categoria p{
+.roww .categoriaaa p, .rowww .categoriaaa p{
     color: var(--azul-escuro);
-    margin-top: 5px;
+    background-color: white;
 }
 
-.categoria{
+.categoriaaa{
     color: #040F41;
     font-family: 'Gotham';
     font-size:small;
-    margin-left: 5%;
-
+    margin-left: -10px;
 }
 
 

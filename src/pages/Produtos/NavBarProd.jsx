@@ -6,63 +6,11 @@ import './nav.css';
 import { Dropdown, Button } from 'react-bootstrap'; // Importe os componentes do react-bootstrap
 
 export default function NavBar() {
-  const scrollToAboutSection = () => {
-    const aboutSection = document.getElementById('aboutSection');
-    if (aboutSection) {
-      window.scrollTo({
-        top: aboutSection.offsetTop,
-        behavior: 'smooth',
-      });
-    }
-  };
-  const scrollToDestaques = () => {
-    const productsSection = document.getElementById('productsSection');
-    if (productsSection) {
-      window.scrollTo({
-        top: productsSection.offsetTop,
-        behavior: 'smooth',
-      });
-    }
-  };
-  const scrollToLancamentos = () => {
-    const lancamentos = document.getElementById('lancamentos');
-    if (lancamentos) {
-      window.scrollTo({
-        top: lancamentos.offsetTop,
-        behavior: 'smooth',
-      });
-    }
-  };
-  const scrollToContatos = () => {
-    const contatos = document.getElementById('contatos');
-    if (contatos) {
-      window.scrollTo({
-        top: contatos.offsetTop,
-        behavior: 'smooth',
-      });
-    }
-  };
+ 
 
   const mainRef = useRef(null)
 
-  const handleDropdownSelection = (eventKey) => {
-    switch (eventKey) {
-      case 'about':
-        scrollToAboutSection();
-        break;
-      case 'destaques':
-        scrollToDestaques();
-        break;
-      case 'lancamentos':
-        scrollToLancamentos();
-        break;
-      case 'contatos':
-        scrollToContatos();
-        break;
-      default:
-        break;
-    }
-  };
+ 
 
 
 
@@ -93,7 +41,9 @@ export default function NavBar() {
         <div className="head-mobile-prod">
           <nav className="navbar"> {/* Certifique-se de que a classe "navbar" está aplicada aqui */}
            
-           <i class="bi bi-arrow-left-circle-fill"></i>
+           
+            <a href="/"><i class="bi bi-arrow-left-circle-fill"></i></a>
+           
           </nav>
         </div>
       </div>

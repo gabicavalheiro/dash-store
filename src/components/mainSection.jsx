@@ -43,7 +43,8 @@ export default function MainSection() {
                     <div className="titleee">
 
                         <h2><div className="h2">{headerData.titulo}</div>{headerData.subtitulo}</h2>
-                        <p>{headerData.paragrafo} </p>
+                        <div className="para"> {headerData.paragrafo} </div>
+                        
                         <div className="b">
                             <button className='btn'> <a href={headerData.link}>{headerData.titulo_botao}</a></button>
                         </div>

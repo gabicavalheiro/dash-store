@@ -98,14 +98,15 @@
     font-size: 60%;
 }
 
-.categoria p{
+.categoriaaa p{
     color: var(--azul-escuro);
     margin-top: 5px;
-    font-size: 80%;
+    font-size: 90%;
+    background-color: white;
 
 }
 
-.categoria{
+.categoriaaa{
     color: #040F41;
     font-family: 'Gotham';
     font-size:small
