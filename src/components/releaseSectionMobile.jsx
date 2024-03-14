@@ -90,7 +90,7 @@ export default function ReleaseSectionMobile() {
                         </div>
                     ))}
                 </div>
-                <div className="btn-btn"><button>Ver mais</button></div>
+                <div className="btn-btn"><button><a href="/">Ver mais</a></button></div>
             </div>
         </div>
     );
