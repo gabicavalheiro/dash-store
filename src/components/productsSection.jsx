@@ -101,9 +101,7 @@ export default function ProductsSection() {
                     ))}
                 </div>
 
-                <div className="btn">
-                    <button>Ver mais</button>
-                </div>
+               
             </div>
         </section>
     );

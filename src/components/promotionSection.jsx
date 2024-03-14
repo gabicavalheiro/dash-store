@@ -37,7 +37,7 @@ export default function PromotionSection() {
         (Data &&
         <div className="promotion">
             <div className="text">
-                <div className="paragrafo">
+                <div className="paragrafooo">
                     <p>{Data.subtitulo}</p>
                 </div>
 

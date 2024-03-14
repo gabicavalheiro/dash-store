@@ -122,7 +122,7 @@ export default function CardComponent() {
                     </div>
 
 
-                    <div className="btn"><button>Ver mais</button></div>
+                    <div className="btn"><button> <a href="/produtos">Ver mais </a></button></div>
                 </div>
             </div>
     );
