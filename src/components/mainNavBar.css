@@ -38,8 +38,7 @@
 .nav{
     width: auto;
     height: 60px;
-    background-color: var(--azul-escuro);
-    border-radius: 50px;
+    background-color: var(--bg-cinza);
     align-items: center;
 }
 
@@ -51,9 +50,10 @@
 }
 
 .container a{
-    color: white;
+    color: #040F41;
     text-decoration: none;
     cursor: pointer;
+    font-family: Gotham-black;
 }
 
 .container a:hover{

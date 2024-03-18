@@ -79,10 +79,10 @@ export default function MainNavBar() {
           <nav className="navbar"> {/* Certifique-se de que a classe "navbar" está aplicada aqui */}
             <div className="nav">
               <div className="container">
-                <a onClick={scrollToAboutSection} className='aa'>Sobre</a>
-                <a onClick={scrollToDestaques} className='aa'>Destaques</a>
-                <a onClick={scrollToLancamentos} className='aa'>Lançamentos</a>
-                <a onClick={scrollToContatos} className='aa'>Contatos</a>
+                <a onClick={scrollToAboutSection} className='aa'>SOBRE</a>
+                <a onClick={scrollToDestaques} className='aa'>DESTAQUES</a>
+                <a onClick={scrollToLancamentos} className='aa'>LANÇAMENTOS</a>
+                <a onClick={scrollToContatos} className='aa'>CONTATOS</a>
 
               </div>
             </div>
