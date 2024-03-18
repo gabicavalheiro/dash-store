@@ -18,7 +18,7 @@ export default function NavBar() {
     <>
       <div className="cabecalho-prod" id='main' ref={mainRef}>
         <div className="logo-prod">
-          <a href="#">
+          <a href="/">
             <img src="./logoAzul.png" alt="logo" className="titulo" />
           </a>
         </div>
@@ -34,7 +34,7 @@ export default function NavBar() {
 
       <div className="cabecalho-mobile-prod">
         <div className="logo-mobile-prod">
-          <a href="#"></a>
+          <a href="/"></a>
           <img src="./icone_dashAzul.png" alt="" width="70" height="70" />
         </div>
 
