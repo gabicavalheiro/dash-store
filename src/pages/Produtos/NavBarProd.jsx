@@ -26,7 +26,7 @@ export default function NavBar() {
         <div className="head-prod">
           <nav className="navbar"> {/* Certifique-se de que a classe "navbar" está aplicada aqui */}
            
-          <i class="bi bi-arrow-left-circle-fill"></i>
+          <a href="/"><i class="bi bi-arrow-left-circle-fill"></i></a>
           </nav>
         </div>
 
