@@ -33,6 +33,11 @@
     flex-direction: column;
     align-items: flex-start;
     color: white;
+    background-color: #040F41;
+}
+.paragrafo-pro p{
+    background-color: #040F41;
+    color: white;
 }
 
 .tituloo-pro {
@@ -93,5 +98,10 @@
     .botaoa-pro{
         padding: 5px 10px;
         
+    }
+
+    .paragrafo-pro p{
+        background-color: #040F41;
+        color: white;
     }
 }
