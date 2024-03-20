@@ -45,9 +45,6 @@ export default function Pro() {
                     {Data.titulo}
                 </div>
 
-                <div className="botao-pro">
-                    <button className="botaoa-pro">{Data.textoBotao}</button>
-                </div>
             </div>
 
             <div className="img-pro">

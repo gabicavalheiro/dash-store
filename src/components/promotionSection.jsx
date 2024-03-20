@@ -45,9 +45,6 @@ export default function PromotionSection() {
                     {Data.titulo}
                 </div>
 
-                <div className="botao">
-                    <button className="botaoa">{Data.textoBotao}</button>
-                </div>
             </div>
 
             <div className="img">

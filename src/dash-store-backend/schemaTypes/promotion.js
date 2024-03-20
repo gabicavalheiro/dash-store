@@ -1,7 +1,7 @@
 export default {
     name: 'promotion',
     type: 'document',
-    title: 'Promoção',
+    title: 'Destaques',
     fields: [
       {
         name: 'subtitulo',
@@ -12,11 +12,6 @@ export default {
         name: 'titulo',
         type: 'text',
         title: 'Titulo'
-      },
-      {
-        name: 'textoBotao',
-        type: 'text',
-        title: 'Texto do Botão'
       },
       {
         name: 'imagem',
