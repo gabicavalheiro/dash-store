@@ -3,7 +3,7 @@
 export default {
     name: 'catalog',
     type: 'document',
-    title: 'Ultimos Lançamentos',
+    title: 'Produtos',
     
     fields: [
         {
