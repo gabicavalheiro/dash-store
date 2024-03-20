@@ -119,9 +119,9 @@
     height: 300px;
     gap: 10%;
 }
-.roww .image{
-    width: 200px;
-    height: 200px;
+.roww .image, .rowww .image{
+    width: 400px;
+    height: 300px;
 }
 
 .roww .line, .rowww .line{
@@ -135,8 +135,5 @@
     height: 300px;
     gap: 10%;
 }
-.rowww .image{
-    width: 200px;
-    height: 200px;
-}
+
 

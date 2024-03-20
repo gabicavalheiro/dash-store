@@ -13,11 +13,12 @@
 }
 
 
-.section{
+.section-mobile-r{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-bottom: 10%;
+    
 }
 
 
@@ -60,8 +61,8 @@
 
 .image{
    
-    width: 150px;
-    height: 160px;
+    width: 250px;
+    height: 200px;
 }
 
 .tit{
@@ -138,6 +139,8 @@
 
 
 @media (max-width: 836px){
+
+   
     .release{
         margin-top: 0;
         display: flex;

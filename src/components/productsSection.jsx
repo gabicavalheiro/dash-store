@@ -90,7 +90,7 @@ export default function ProductsSection() {
                                     </div>
                                    
                                     <div className="imagem">
-                                        <img src={product.imageUrlComplete} alt={product.titulo} width="200" height="230" />
+                                        <img src={product.imageUrlComplete} alt={product.titulo} width="250" height="230" />
                                     </div>
                                     <div className="seta">
                                         <i className="bi bi-arrow-right"><a href={product.link}></a></i>
