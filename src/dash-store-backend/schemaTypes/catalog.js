@@ -24,7 +24,21 @@ export default {
                         {
                             name: 'titulo',
                             type: 'string',
-                            title: 'Titulo'
+                            title: 'Titulo',
+                            validation: Rule => Rule.required(),
+                            validation: Rule => Rule.custom((titulo) => {
+                                if (!titulo || titulo === '') {
+                                    return 'O título é obrigatório.';
+                                } else {
+                                    return true;
+                                }
+                            }),
+                            // Transformação para maiúsculas
+                            validation: Rule => Rule.custom((titulo) => {
+                                return titulo === titulo.toUpperCase()
+                                    ? true
+                                    : 'O título deve estar em maiúsculas.';
+                            }),
                         },
                         {
                             name: 'categoria',
@@ -70,5 +84,4 @@ export default {
             ]
         }
     ]
-  };
-  
+};
