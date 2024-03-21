@@ -130,7 +130,7 @@ export default function Catalog() {
                             <img src={card.imageUrlComplete}  />
                         </div>
                         <div className="card-titulo"> <h6> {card.titulo} </h6> </div>
-                        <p>{card.preco}</p>
+                        <p>R${card.preco}</p>
                     </div>
                 ))}
             </div>

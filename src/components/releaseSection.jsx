@@ -82,12 +82,12 @@ export default function CardComponent() {
                                     {card.imageUrlComplete && <img src={card.imageUrlComplete} alt={card.titulo} className='image' />}
                                 </div>
                                 <div className="tit">
-                                    <div className="line">
+                                    <div className="line-R">
                                         <div className="produto">
                                             {card.titulo}
                                         </div>
                                         <div className="preco">
-                                            {card.preco}
+                                            R${card.preco}
                                         </div>
                                     </div>
                                     <div className="categoriaaa">
@@ -110,7 +110,7 @@ export default function CardComponent() {
                                             {card.titulo}
                                         </div>
                                         <div className="preco">
-                                            {card.preco}
+                                            R${card.preco}
                                         </div>
                                     </div>
                                     <div className="categoriaaa">

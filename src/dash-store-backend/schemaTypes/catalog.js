@@ -53,7 +53,7 @@ export default {
                             name: 'preco',
                             type: 'string',
                             title: 'Preço',
-                            description: 'Insira o R$'
+                            description: 'Só o valor em formato DECIMAL'
                         },
                         // Adicionando a data de criação
                         {

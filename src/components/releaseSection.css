@@ -67,7 +67,7 @@
     margin-top: 7%;
 }
 
-.line{
+.line-R{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -122,8 +122,8 @@
     height: 300px;
 }
 
-.roww .line, .rowww .line{
-    width: 350px;
+.roww .line-R, .rowww .line-R{
+    width: 420px;
     font-size: 20px
 }
 

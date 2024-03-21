@@ -80,7 +80,7 @@ export default function ReleaseSectionMobile() {
                                         {card.titulo}
                                     </div>
                                     <div className="preco">
-                                        {card.preco}
+                                        R${card.preco}
                                     </div>
                                 </div>
                                 <div className="categoriaaa">
