@@ -42,7 +42,7 @@ input::placeholder{
 .cards-catalogo {
     display: flex;
     justify-content: space-between;
-    margin-top: 5%;
+    margin-top: -10%;
     flex-wrap: wrap;
     margin: 10%;
 }
@@ -64,7 +64,7 @@ input::placeholder{
 
 p{
     color: #040F41;
-    background-color: #F5F5F5;
+    background-color: #e5e5e5;
     padding: 2% 8%;
     font-style: 'Gotham-black';
     font-weight: 500;
@@ -77,10 +77,11 @@ p{
     color: #040F41;
     font-style: 'Gotham-black';
     font-size: 110%;
-    margin-top: 8%;
 }
 
 .card-image img{
+    margin-bottom: 10%;
+    border-radius: 15px;
     width: 350px;
     height: 300px;
 }

@@ -3,7 +3,6 @@ import MainNavBar from '../../components/mainNavBar';
 import MainSection from '../../components/mainSection';
 import ProductsSection from '../../components/productsSection';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import PromotionSection from '../../components/promotionSection';
 import ReleaseSection from '../../components/releaseSection';
 import Footer from '../../components/footer';
 import ProductsSectionMobile from '../../components/productsSectionMobile';
@@ -22,7 +21,6 @@ export default function Home() {
       <div className="about"><AboutSection /></div>
       <div className="products"><ProductsSection /> </div>
       <div className="productsMobile" ><ProductsSectionMobile /></div>
-      <PromotionSection />
       <div className="releaseSection"> <ReleaseSection /></div>
       <div className="releaseMobile"><ReleaseSectionMobile/></div>
       
