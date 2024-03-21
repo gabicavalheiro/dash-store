@@ -42,36 +42,39 @@
     height: 320px;
     border: none;
     border-radius: 15px;
-    background-color: var(--bg-cinza-card);
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
    
 }
 
 
-h1 {
+.produto h1 {
+    display: flex;
+    justify-content: center;
+    margin-left: -15%;
     font-family: Gotham;
     font-weight: 900;
-    position: absolute;
     margin-top: 10%;
-    margin-left: 10%;
     font-size: 130%;
     text-transform: uppercase;
 }
 
-.imagem {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 10%;
+.imagem img {
     margin-top: 12%;
+    border-radius: 15px;
+    width: 350px;
+    height: 250px;
+    
 }
 
 .seta {
     display: flex;
-    align-items: flex-end;
-    margin-left: 10%;
-    margin-top: -7%;
     color: black;
     font-size: 30px;
     cursor: pointer;
+    margin-top: 5%;
 }
 
 .btn {

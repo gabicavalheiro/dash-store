@@ -115,11 +115,13 @@
 .roww .box{
     width: 300px;
     height: 300px;
-   gap: 10%
+    gap: 10%
 }
 .roww .image, .rowww .image{
     width: 400px;
     height: 300px;
+       border-radius: 15px;
+
 }
 
 .roww .line-R, .rowww .line-R{
@@ -131,7 +133,8 @@
 .rowww .box{
     width: 300px;
     height: 300px;
-   gap: 10%
+   gap: 10%;
+   border-radius: 15px;
 }
 
 

@@ -90,7 +90,7 @@ export default function ProductsSectionMobile() {
                                 <div className="cardb">
                                     <h3>{card.categoriaData?.categorias[0]}</h3>
                                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
-                                        <img src={card.imageUrlComplete} alt={card.alt} style={{ maxWidth: '150px', maxHeight: '200px', backgroundColor: '#F5F5F5', padding: '20px 30px', borderRadius: '15px' }} />
+                                        <img src={card.imageUrlComplete} alt={card.alt} style={{ maxWidth: '250px', maxHeight: '300px', borderRadius: '15px' }} />
                                     </div>
                                     <div> <a href={card.link}>Ver </a></div> {/* Troque o <p> por <div> */}
                                 </div>
