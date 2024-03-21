@@ -58,12 +58,7 @@ input::placeholder{
 
 }
 
-.card-image {
-    background-color: #F5F5F5;
-    padding: 30px;
-    border-radius: 15px;
-    
-}
+
 
 
 
@@ -75,6 +70,7 @@ p{
     font-weight: 500;
     border-radius: 15px;
     max-width: 150px;
+    margin-top: 5%;
 }
 
 .card-titulo h6{
@@ -84,6 +80,10 @@ p{
     margin-top: 8%;
 }
 
+.card-image img{
+    width: 350px;
+    height: 300px;
+}
 
 @media (max-width: 836px){
 

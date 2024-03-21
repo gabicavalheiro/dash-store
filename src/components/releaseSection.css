@@ -53,8 +53,6 @@
 .box{
     width: 300px ;
     height: 300px;
-    border-radius: 15px;
-    background-color: var(--bg-cinza-card);
     display: flex;
     justify-content: center;
     align-items: center;

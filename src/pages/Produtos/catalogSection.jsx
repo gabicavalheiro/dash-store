@@ -127,7 +127,7 @@ export default function Catalog() {
                 {filteredCardData.map((card) => (
                     <div key={card._key} className="card-catalogo">
                         <div className="card-image">
-                            <img src={card.imageUrlComplete} width="150" height="180" alt="" />
+                            <img src={card.imageUrlComplete}  />
                         </div>
                         <div className="card-titulo"> <h6> {card.titulo} </h6> </div>
                         <p>{card.preco}</p>
