@@ -115,7 +115,7 @@
 .roww .box{
     width: 300px;
     height: 300px;
-    gap: 10%;
+   gap: 10%
 }
 .roww .image, .rowww .image{
     width: 400px;
@@ -131,7 +131,7 @@
 .rowww .box{
     width: 300px;
     height: 300px;
-    gap: 10%;
+   gap: 10%
 }
 
 

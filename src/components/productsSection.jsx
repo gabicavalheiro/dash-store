@@ -14,7 +14,7 @@ const getImageUrlComplete = async (card, urlFor) => {
     if (imageUrl && imageUrl.options && imageUrl.options.baseUrl && imageUrl.options.source) {
         const { baseUrl, projectId, dataset, source } = imageUrl.options;
         const imageName = source.substring(6);
-        const formattedImageName = imageName.replace('-png', '.png');
+        const formattedImageName = imageName.replace('-png', '.png').replace('-jpg', '.jpg').replace('-jpeg', '.jpeg');
         imageUrlComplete = `${baseUrl}/images/${projectId}/${dataset}/${formattedImageName}`;
     }
 

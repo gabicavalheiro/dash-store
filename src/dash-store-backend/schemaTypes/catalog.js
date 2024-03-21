@@ -19,7 +19,10 @@ export default {
                             name: 'imagem',
                             type: 'image',
                             title: 'Imagem',
-                            description: 'A imagem precisa estar em .png e com o fundo removido.'
+                            description: 'Dê prioridades para imagens quadradas, esteticamente, ficarão melhor.',
+                            options: {
+                                accept: '.jpeg,.jpg,.png', // Aqui adicionamos 'image/jpeg,image/jpg' para aceitar JPG também
+                            }
                         },
                         {
                             name: 'titulo',
