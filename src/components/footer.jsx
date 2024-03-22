@@ -78,47 +78,47 @@ export default function Footer() {
 
     return (
 
-        (Data &&
-            <div className="footer" id="contatos" ref={contatosRef}>
-                <div className="content">
-                    <div className="text">
-                        <div className="titlee">
-                            Dash Store
-                        </div>
-                        <div className="ctt" >
-                            <ul>
-                                <li><a onClick={scrollToMain} className='aa'>Início</a></li>
-                                <li><a onClick={scrollToAboutSection} className='aa'>Sobre</a></li>
-                                <li><a  onClick={scrollToDestaques} className='aa'>Destaques</a></li>
-                                <li><a  onClick={scrollToLancamentos} className='aa'>Lançamentos</a></li>
-                            </ul>
-                        </div>
+      (Data &&
+        <div className="footer" id="contatos" ref={contatosRef}>
+            <div className="content">
+                <div className="text-f">
+                    <div className="titlee-f">
+                        Dash Store
                     </div>
-                    <div className="text">
-                        <div className="titlee">
-                            Produtos
-                        </div>
-                        <div className="ctt">
-                            <ul>
-                                <li><a href="">Veja todos os produtos</a></li>
-                            </ul>
-                        </div>
+                    <div className="ctt-f" >
+                        <ul>
+                            <li><a onClick={scrollToMain} className='aa'>Início</a></li>
+                            <li><a onClick={scrollToAboutSection} className='aa'>Sobre</a></li>
+                            <li><a  onClick={scrollToDestaques} className='aa'>Destaques</a></li>
+                            <li><a  onClick={scrollToLancamentos} className='aa'>Lançamentos</a></li>
+                        </ul>
                     </div>
                 </div>
-                <div className="content">
-                    <div className="text">
-                        <div className="redes">
-                        <div className="titlee">
-                            Nos acompanhe nas redes sociais
-                        </div>
-                        <div className="cttt">
-                        <i class="bi bi-instagram"> <a href={Data.Link_i}></a></i>
-                        <i class="bi bi-whatsapp"><a href={Data.Link_w}></a></i>                       
-                     </div>
-                     </div>
+                <div className="text-f">
+                    <div className="titlee-f">
+                        Produtos
+                    </div>
+                    <div className="ctt-f">
+                        <ul>
+                            <li><a href="">Veja todos os produtos</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        )
+            <div className="content">
+                <div className="text-f">
+                    <div className="redes">
+                    <div className="titlee-f">
+                        Nos acompanhe nas redes sociais
+                    </div>
+                    <div className="cttt-f">
+                    <i class="bi bi-instagram"> <a href={Data.Link_i}></a></i>
+                    <i class="bi bi-whatsapp"><a href={Data.Link_w}></a></i>                       
+                 </div>
+                 </div>
+                </div>
+            </div>
+        </div>
     )
+)
 }

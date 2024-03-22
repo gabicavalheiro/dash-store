@@ -22,7 +22,6 @@ export default {
                     name: 'imagem',
                     type: 'image',
                     title: 'Imagem',
-                    description: 'A imagem precisa estar em .png com o fundo removido'
                   },
                   {
                     name: 'link',

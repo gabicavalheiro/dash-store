@@ -17,7 +17,7 @@ export default function NavBar() {
     if (currentPath === '/produtos/categoria') {
       return `${basePath}/logoAzul.png`; // Caminho da imagem para a rota '/produtos/categoria'
     } else {
-      return `${basePath}/logoAzul.png`; // Caminho da imagem padrão para outras rotas
+      return `${basePath}/logoDefault.png`; // Caminho da imagem padrão para outras rotas
     }
   };
 

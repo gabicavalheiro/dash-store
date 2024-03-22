@@ -72,8 +72,17 @@ export default function ProductsSectionMobile() {
     };
 
     const goToNextSlide = () => {
-        sliderRef.current.slickNext();
+        if (sliderRef.current) {
+            const { currentSlide, slideCount } = sliderRef.current.innerSlider.state;
+            if (currentSlide + settings.slidesToShow < slideCount) {
+                sliderRef.current.slickNext();
+            } else {
+                // Se não houver mais slides disponíveis para avançar, volta ao início
+                sliderRef.current.slickGoTo(0);
+            }
+        }
     };
+    
 
 
     return (

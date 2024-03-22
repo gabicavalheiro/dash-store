@@ -18,6 +18,11 @@
 .footer{
     background-color: #040F41;
     height: auto;
+    padding-top: 5%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5%;
 }
 
 .content{
@@ -26,22 +31,21 @@
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 15%;
-    
+    gap: 10%;
 
 }
 
 
 .redes{
-    margin-top: -25%;
+    margin-top: 10%;
 }
-.titlee{
+.titlee-f{
     font-family: Gotham-black;
     font-size: 120% ;
     margin-bottom: 5%;
 }
 
-.text .ctt a {
+.text-f .ctt-f a {
     text-decoration: none;
     color: white;
     font-family: Gotham;
@@ -50,30 +54,50 @@
     justify-content: flex-start;
  }
 
- .ctt a:hover{
+ .text-f{
+    margin-left: 10%;
+ }
+
+ .ctt-f{
+    width: 300px;
+ }
+
+ .ctt-f a:hover{
     cursor: pointer;
     font-weight: bold;
  }
 
- .cttt{
+ .cttt-f{
     display: flex;
     justify-content: center;
     gap: 10%;
     font-size: 150%;
  }
 
- .cttt i:hover{
+ .cttt-f i:hover{
     cursor: pointer;
     font-weight: bold;
 
  }
 
-
+.text-f .redes{
+    width: 350px;
+    margin-left: 5%;
+}
 
  @media (max-width: 836px){
-    .titlee, .text a, .cttt{
+    .titlee-f, .text-f a, .cttt-f{
         font-size: 90% ;
     }
 
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
 
+    .cttt-f i{
+        margin-left: -30%;
+    }
  }

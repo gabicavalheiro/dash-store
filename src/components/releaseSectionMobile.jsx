@@ -72,7 +72,7 @@ export default function ReleaseSectionMobile() {
                     {limitedCardData.map((card) => (
                         <div className="block" key={card._key}>
                             <div className="box">
-                                {card.imageUrlComplete && <img src={card.imageUrlComplete} alt={card.titulo} className='image' width="150" height="150" />}
+                                {card.imageUrlComplete && <img src={card.imageUrlComplete} alt={card.titulo} className='image'  />}
                             </div>
                             <div className="tit">
                                 <div className="line">
