@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { FaInstagram } from "react-icons/fa";
 
 import React, { useRef } from 'react';
 import './mainNavBar.css';
@@ -83,6 +84,7 @@ export default function MainNavBar() {
                 <a onClick={scrollToDestaques} className='aa'>DESTAQUES</a>
                 <a onClick={scrollToLancamentos} className='aa'>LANÇAMENTOS</a>
                 <a onClick={scrollToContatos} className='aa'>CONTATOS</a>
+                <a href="https://www.instagram.com/dash.storepel/" className='aa'><FaInstagram size={30} /> dash.storepel</a>
 
               </div>
             </div>
@@ -106,10 +108,11 @@ export default function MainNavBar() {
                   <i className="bi bi-list"></i>
                 </Dropdown.Toggle>
                 <Dropdown.Menu >
-                  <Dropdown.Item  href="#aboutSection">Sobre</Dropdown.Item>
-                  <Dropdown.Item  href="#products">Nossos produtos</Dropdown.Item>
-                  <Dropdown.Item  href="#lancamentos">Lançamentos</Dropdown.Item>
-                  <Dropdown.Item  href="#contatos">Contatos</Dropdown.Item>
+                  <Dropdown.Item href="#aboutSection">Sobre</Dropdown.Item>
+                  <Dropdown.Item href="#products">Nossos produtos</Dropdown.Item>
+                  <Dropdown.Item href="#lancamentos">Lançamentos</Dropdown.Item>
+                  <Dropdown.Item href="#contatos">Contatos</Dropdown.Item>
+                  <Dropdown.Item  href="https://www.instagram.com/dash.storepel/"> <FaInstagram size={15} /> dash.storepel </Dropdown.Item>
 
                 </Dropdown.Menu>
               </Dropdown>
