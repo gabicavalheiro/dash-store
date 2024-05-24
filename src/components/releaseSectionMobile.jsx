@@ -63,7 +63,7 @@ export default function ReleaseSectionMobile() {
     const limitedCardData = cardData ? cardData.slice(0, 2) : [];
 
     return (
-        <div className="section-mobile-r">
+        <div className="section-mobile-r" id="lancamentos">
             <div className="titulo">
                 ÚLTIMOS LANÇAMENTOS
             </div>

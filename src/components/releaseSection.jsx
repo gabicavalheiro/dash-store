@@ -68,7 +68,7 @@ export default function CardComponent() {
     const lancamentosRef = useRef(null);
 
     return (
-        <div className="section"  id="lancamentos" ref={lancamentosRef}>
+        <div className="section"  id='lancamentosd' ref={lancamentosRef}>
             <div className="titulo">
                     ÚLTIMOS LANÇAMENTOS
                 </div>

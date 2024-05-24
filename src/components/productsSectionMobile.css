@@ -17,11 +17,6 @@
         color: #040F41;
         
     }
-    .card-carrossel a {
-        color: #040F41;
-        font-size: 70%;
-        font-family: Gotham;
-    }
    
     .card-carrossel h3{
         margin-top: 20%;
@@ -33,7 +28,7 @@
     }
 
     .productsMobile{
-        margin-top: 30%;
+        margin-top: 20%;
         margin-bottom: 50%;
     }
     .titul{
@@ -56,11 +51,23 @@
         color: #040F41; /* Cor das setas */
         cursor: pointer;
         outline: none;
-        margin-top: 10%;
+        margin-top: 15%;
       }
 
 
-     
+    .bt{
+        margin-top: 4%
+    }
+     .acardl{
+        padding: 2px 15px;
+        border: 2px solid #040F41;
+        text-decoration: none;
+        border-radius: 15px;
+        font-size: 70%;
+        font-family: Gotham;
+        color: #040F41;
+        font-weight: bold;
+     }
     
  
     }

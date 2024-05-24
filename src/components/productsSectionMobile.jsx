@@ -82,38 +82,44 @@ export default function ProductsSectionMobile() {
             }
         }
     };
-    
+
 
 
     return (
-        <div className="productsMobile">
-            <div className="titul">
-                NOSSOS PRODUTOS
-            </div>
-    
-            <div>
-                {cardData ? (
-                    <Slider {...settings} ref={sliderRef}>
-                        {cardData.map((card, index) => (
-                            <div key={index} className="card-carrossel">
-                                <div className="cardb">
-                                    <h3>{card.categoriaData?.categorias[0]}</h3>
-                                    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
-                                        <img src={card.imageUrlComplete} alt={card.alt} style={{ maxWidth: '250px', maxHeight: '300px', borderRadius: '15px' }} />
+        <>
+            <div className="productsMobile" id="products">
+                <div className="titul">
+                    NOSSOS PRODUTOS
+                </div>
+
+                <div>
+                    {cardData ? (
+                        <Slider {...settings} ref={sliderRef}>
+                            {cardData.map((card, index) => (
+                                <div key={index} className="card-carrossel">
+                                    <div className="cardb">
+                                        <h3>{card.categoriaData?.categorias[0]}</h3>
+                                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '200px' }}>
+                                            <img src={card.imageUrlComplete} alt={card.alt} style={{ maxWidth: '250px', maxHeight: '300px', borderRadius: '15px' }} />
+                                        </div>
                                     </div>
-                                    <div> <a href={card.link}>Ver </a></div> {/* Troque o <p> por <div> */}
+                                    <div className="bt"> <a href={card.link} className="acardl">VER </a>{/* Troque o <p> por <div> */}</div>
                                 </div>
-                            </div>
-                        ))}
-                    </Slider>
-                ) : (
-                    <p>Carregando...</p>
-                )}
-                <button className="arrow-button" onClick={goToNextSlide}><BsArrowRight /></button>
+
+                                
+                            ))}
+                        </Slider>
+                    ) : (
+                        <p>Carregando...</p>
+                    )}
+                   
+
+                    <button className="arrow-button" onClick={goToNextSlide}><BsArrowRight /></button>
+                </div>
             </div>
-        </div>
+        </>
     );
-    
+
 }
 
 

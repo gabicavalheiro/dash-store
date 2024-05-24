@@ -25,7 +25,7 @@ export default function MainNavBar() {
     }
   };
   const scrollToLancamentos = () => {
-    const lancamentos = document.getElementById('lancamentos');
+    const lancamentos = document.getElementById('lancamentosd');
     if (lancamentos) {
       window.scrollTo({
         top: lancamentos.offsetTop,
@@ -106,11 +106,12 @@ export default function MainNavBar() {
                   <i className="bi bi-list"></i>
                 </Dropdown.Toggle>
                 <Dropdown.Menu >
-                  <Dropdown.Item eventKey="about">Sobre</Dropdown.Item>
-                  <Dropdown.Item eventKey="destaques">Destaques</Dropdown.Item>
-                  <Dropdown.Item eventKey="lancamentos">Lançamentos</Dropdown.Item>
-                  <Dropdown.Item eventKey="contatos">Contatos</Dropdown.Item>
-                  </Dropdown.Menu>
+                  <Dropdown.Item  href="#aboutSection">Sobre</Dropdown.Item>
+                  <Dropdown.Item  href="#products">Nossos produtos</Dropdown.Item>
+                  <Dropdown.Item  href="#lancamentos">Lançamentos</Dropdown.Item>
+                  <Dropdown.Item  href="#contatos">Contatos</Dropdown.Item>
+
+                </Dropdown.Menu>
               </Dropdown>
             </div>
           </nav>

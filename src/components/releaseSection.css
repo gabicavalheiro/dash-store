@@ -108,11 +108,11 @@
 
 
 
-.roww{
+.roww, .rowww{
     display: flex;
     
 }
-.roww .box{
+.roww .box, .rowww .box{
     width: 300px;
     height: 300px;
     gap: 10%
@@ -124,7 +124,8 @@
 
 }
 
-.roww .line-R, .rowww .line-R{
+
+.roww .line-R, .rowww .line{
     width: 420px;
     font-size: 20px
 }

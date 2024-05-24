@@ -1,6 +1,8 @@
 import './aboutSection.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { SiWhatsapp } from "react-icons/si";
+
 
 import React, { useEffect, useRef, useState } from 'react';
 import client from '../sanit.mjs';
@@ -11,7 +13,7 @@ async function fetchData() {
     try {
         const query = `*[_type == "about"][0]`;
         const Data = await client.fetch(query);
-        console.log('Dados do:',Data); // Log dos dados do cabeçalho
+        console.log('Dados do:', Data); // Log dos dados do cabeçalho
         return Data;
     } catch (error) {
         console.error('Erro ao buscar dados no Sanity:', error);
@@ -34,16 +36,19 @@ export default function AboutSection() {
 
     return (
         (Data &&
-            <section  id="aboutSection" ref={aboutSectionRef}>    
-        <div className='about'>
-            <div className="titulooo">
-                SOBRE NÓS           
-            </div>
-            <div className="texto">
-                {Data.texto}
-            </div>
-        </div>
-        </section>
+            <section id="aboutSection" ref={aboutSectionRef}>
+                <div className='about'>
+                    <div className="titulooo">
+                        SOBRE NÓS
+                    </div>
+                    <div className="texto">
+                        {Data.texto}
+                    </div>
+                    <div className="btw">
+                        <SiWhatsapp size={50}/>
+                    </div>
+                </div>
+            </section>
         )
     )
 }
