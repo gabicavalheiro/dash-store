@@ -7,6 +7,11 @@ export default {
         name: 'texto',
         type: 'text',
         title: 'Texto'
+      },
+      {
+        name: 'linkWhats',
+        type:'text',
+        title:'link do whats'
       }
     ]
 }

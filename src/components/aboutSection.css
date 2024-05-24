@@ -33,16 +33,28 @@
 
 }
 
+@keyframes jump {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
 .btw{
     font-size: 140%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #040F41;
+    color: #030b2c;
+    cursor: pointer;
+    animation: jump 2s infinite;
 }
-.btw:hover{
-    color: #646A87;
-}
+
 
 @media (max-width: 836px){
     .titulooo{

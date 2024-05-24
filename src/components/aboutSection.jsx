@@ -45,7 +45,8 @@ export default function AboutSection() {
                         {Data.texto}
                     </div>
                     <div className="btw">
-                        <SiWhatsapp size={50}/>
+                        <a href={Data.linkWhats}><SiWhatsapp className='siwpp' size={50} style={{color:'#040F41'}}/></a>
+                        
                     </div>
                 </div>
             </section>
